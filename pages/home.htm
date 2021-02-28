@@ -1,0 +1,17 @@
+title = "Home"
+url = "/"
+layout = "main"
+is_hidden = 0
+==
+{% put scripts %}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+        <script type="text/javascript" src="{{ ['assets/js/home.js']|theme }}"></script>
+{% endput %}
+<div id="home-content" class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2><span>Hi,</span> <span>I'm Orry</span></h2>
+            <p><span>Welcome to my corner</span> <span>of the Internet</span></p>
+        </div>
+    </div>
+</div>

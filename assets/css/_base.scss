@@ -1,0 +1,33 @@
+html {
+    font-size: 16px;
+    height: 100%;
+    
+    @include media-breakpoint-down(xs) {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nexa', 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@include media-breakpoint-up(sm) {
+    .container-fluid {
+        padding: 0 2.5rem;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}

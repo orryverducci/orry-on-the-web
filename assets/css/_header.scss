@@ -1,0 +1,176 @@
+header {
+    z-index: 2;
+    color: #fff;
+    background: #263238;
+
+    .row {
+        height: 5rem;
+        align-items: center;
+        
+        & > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @include media-breakpoint-down(xs) {
+            height: 4rem;
+        }
+    }
+    
+    img {
+        height: 3rem;
+        margin-top: 0.6rem;
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: 'Nexa', sans-serif;
+        
+        @include media-breakpoint-down(xs) {
+            height: 2.4rem;
+            margin-top: 0.2rem;
+            font-size: 1.6rem;
+        }
+    }
+    
+    #menu-icon {
+        font-size: 1.5rem;
+        
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+        
+        
+        a {
+            color: inherit;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+            
+            div {
+                height: 0.2rem;
+                width: 1.5rem;
+                background: #fff;
+                margin-bottom: 0.375rem;
+                
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+    nav {
+        overflow: hidden;
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+            li {
+                position: relative;
+                list-style: none;
+            }
+        }
+        
+        a {
+            position: relative;
+            color: inherit;
+            padding: 0.4rem 0.7rem;
+            transition: color 0.1s linear;
+            display: block;
+            text-align: center;
+            
+            span {      
+                svg {
+                    margin-right: 0.3rem;
+                }
+                
+                position: relative;
+                z-index: 2;
+            }
+            
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                transition: opacity 0.1s linear, transform 0.1s ease;
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            
+            &:hover {
+                color: #61892f;
+                
+                &:before {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+        
+        @include media-breakpoint-down(md) {
+            &.col-auto {
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 0;
+                background: #263238;
+                padding: 0;
+                transition: width 0.5s ease;
+                
+                ul {
+                    position: absolute;
+                    top: 5rem;
+                    right: 0;
+                    width: 20rem;
+                    height: calc(100% - 5rem);
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                
+                a {
+                    font-size: 1.2rem;
+                    
+                    span svg {
+                        margin-right: 0.6rem;
+                    }
+                }
+            }
+        }
+        
+        @include media-breakpoint-down(xs) {
+            &.col-auto {
+                ul {
+                    top: 4rem;
+                    width: 100vw;
+                    height: calc(100% - 4rem);
+                }
+                
+                a {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+    
+    &.menu-visible {
+        nav.col-auto {
+            @include media-breakpoint-down(md) {
+                width: 20rem;
+            }
+            
+            @include media-breakpoint-down(xs) {
+                width: 100vw;
+            }
+        }
+    }
+}

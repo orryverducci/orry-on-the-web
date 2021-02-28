@@ -1,0 +1,47 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if placeholder('themecolour') %}
+        <meta name="theme-color" content="{% placeholder themecolour %}">
+        {% endif %}
+        <title>{% if this.page.meta_title %}{{ this.page.meta_title }} - {% endif %}Orry on the Web</title>
+        <link rel="icon" type="image/x-icon" href="{{ 'assets/favicon.ico'|theme }}">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet"> 
+        <link href="{{ ['assets/css/main.scss']|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body id="page-{{ this.page.id }}"{% if now|date("n") == "12" %} data-xmas="true"{% endif %}>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    {% if now|date("n") == "12" %}
+                    <img src="{{ 'assets/images/logo-xmas.svg'|theme }}" alt="Orry on the Web">
+                    {% else %}
+                    <img src="{{ 'assets/images/logo.svg'|theme }}" alt="Orry on the Web">
+                    {% endif %}
+                </div>
+                <div id="menu-icon" class="col-auto">
+                    <a href="#">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <!--<i class="far fa-bars"></i>-->
+                    </a>
+                </div>
+                <nav class="col-auto">
+                    {% partial "menu" %}
+                </nav>
+            </div>
+        </header>
+        <main role="main">
+            {% page %}
+        </main>
+        <script type="text/javascript" src="{{ 'assets/js/vendor/jquery-3.4.1.slim.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/fontawesome.min.js'|theme }}"></script>
+        <script type="module" src="{{ 'assets/js/main.js'|theme }}"></script>
+        {% scripts %}
+    </body>
+</html>

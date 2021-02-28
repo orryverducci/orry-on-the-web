@@ -1,0 +1,14 @@
+title = 404
+url = "/404"
+layout = "main"
+meta_title = "Page Not Found"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    $this->addJs("https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js");
+    $this->addJs("assets/js/404.js");
+}
+?>
+==

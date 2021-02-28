@@ -1,0 +1,22 @@
+#page-404 {
+    background: #000;
+    color: #FFF;
+    
+    header {
+        background: transparent;
+        
+        nav a:hover {
+            color: #B71C1C;
+        }
+    }
+    
+    main {
+        height: 100%;
+        
+        #animation {
+            display: block;
+            width: 100vw;
+            height: 100%;
+        }
+    }
+}
