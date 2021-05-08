@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@hotwired/turbo": "*",
         "bootstrap": "^5.0.0",
         "laravel-mix": "^6.0.6",
         "resolve-url-loader": "^3.1.3",
