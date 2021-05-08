@@ -23,6 +23,11 @@
 Homestead.json
 Homestead.yaml
 
+# Compiled assets
+/public/css
+/public/js
+/public/mix-manifest.json
+
 ### Node ###
 
 # Dependency directories
