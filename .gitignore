@@ -1,37 +1,37 @@
 ### Laravel ###
 
 # Composer vendor folder
-vendor/
+website/vendor/
 
 # Environment files
 .env
 .env.backup
 
 # Webpack hot module replacement
-public/hot/
+website/public/hot/
 
 # Storage symlink
-public/storage/
+website/public/storage/
 
 # Secret keys
-storage/*.key
+website/storage/*.key
 
 # PHPUnit
 .phpunit.result.cache
 
 # Homestead
-Homestead.json
-Homestead.yaml
+website/Homestead.json
+website/Homestead.yaml
 
 # Compiled assets
-public/css/
-public/js/
-public/mix-manifest.json
+website/public/css/
+website/public/js/
+website/public/mix-manifest.json
 
 ### Node ###
 
 # Dependency directories
-node_modules/
+*/node_modules/
 
 # Optional npm cache directory
 .npm
