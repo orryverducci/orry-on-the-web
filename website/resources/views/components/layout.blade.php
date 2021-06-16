@@ -12,7 +12,6 @@
         <meta name="theme-color" content="{{ $themecolour }}">
         @endif
         <link href="/favicon.ico" rel="icon" type="image/x-icon" >
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script src="{{ mix('/js/app.js') }}" type="text/javascript" async></script>
     </head>

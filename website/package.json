@@ -17,5 +17,8 @@
         "sass": "^1.32.12",
         "sass-loader": "^11.0.1",
         "stimulus": "^2.0.0"
+    },
+    "dependencies": {
+        "@fontsource/montserrat": "^4.4.5"
     }
 }
