@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+
+  app:
+    build:
+      dockerfile: docker/php/development.Dockerfile
+    volumes:
+      - ./website:/usr/orryweb
+
+  server:
+    build:
+      dockerfile: docker/nginx/development.Dockerfile
+    volumes:
+      - ./website:/usr/orryweb
+    ports:
+      - 5000:80
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - 8025:8025
+    environment:
+      TZ: Europe/London
+    networks:
+      - app-network

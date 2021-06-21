@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+
+  app:
+    build:
+      dockerfile: docker/php/production.Dockerfile
+    restart: always
+
+  server:
+    build:
+      dockerfile: docker/nginx/production.Dockerfile
+    restart: always
+    ports:
+      - 80:80

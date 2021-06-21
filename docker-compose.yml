@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+
+  app:
+    build:
+      context: .
+    image: orryverducci/app
+    environment:
+      TZ: Europe/London
+    networks:
+      - app-network
+
+  server:
+    build:
+      context: .
+    image: orryverducci/server
+    environment:
+      TZ: Europe/London
+    networks:
+      - app-network
+
+networks:
+
+  app-network:
+    driver: bridge
