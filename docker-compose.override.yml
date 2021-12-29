@@ -6,7 +6,7 @@ services:
       args:
         conf: staging.nginx.conf
     ports:
-      - 5000:80
+      - 8080:80
 
   mailhog:
     image: mailhog/mailhog:latest
