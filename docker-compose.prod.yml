@@ -2,12 +2,12 @@ version: '3.7'
 services:
 
   app:
-    build:
-      args:
-        conf: production.nginx.conf
     restart: always
 
   server:
+    build:
+      args:
+        conf: production.nginx.conf
     restart: always
     ports:
       - 80:80
