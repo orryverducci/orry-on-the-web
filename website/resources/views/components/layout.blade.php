@@ -11,6 +11,8 @@
         @if (isset($themecolour))
         <meta name="theme-color" content="{{ $themecolour }}">
         @endif
+        <meta name="google-site-verification" content="nLUL7swGgc-k1Io-r5lZYk_i8aXedERKq6Mb6PEYUbY" />
+        <meta name="msvalidate.01" content="8BD1560DF5967630C8CEE1C55F8A75A9" />
         <link href="/favicon.ico" rel="icon" type="image/x-icon" >
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script src="{{ mix('/js/app.js') }}" type="text/javascript" async></script>
