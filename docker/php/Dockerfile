@@ -26,6 +26,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy website files
 COPY ./website .
 
+# Set permissions
+RUN chown -R www-data:www-data /usr/orryweb
+
 # Install Laravel dependencies
 RUN composer install
 
