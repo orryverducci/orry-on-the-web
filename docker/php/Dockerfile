@@ -18,7 +18,7 @@ RUN docker-php-ext-install bcmath exif gd mbstring pcntl
 
 # Use production PHP config and copy custom config
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
-COPY ./docker/php/php.ini /usr/local/etc/php/conf.d/local.ini
+COPY ./docker/php/php.ini "$PHP_INI_DIR/conf.d/local.ini"
 
 # Get Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
