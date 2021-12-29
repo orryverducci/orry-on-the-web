@@ -3,12 +3,11 @@ services:
 
   app:
     build:
-      dockerfile: docker/php/production.Dockerfile
+      args:
+        conf: production.nginx.conf
     restart: always
 
   server:
-    build:
-      dockerfile: docker/nginx/production.Dockerfile
     restart: always
     ports:
       - 80:80

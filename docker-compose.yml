@@ -4,6 +4,7 @@ services:
   app:
     build:
       context: .
+      dockerfile: docker/php/Dockerfile
     image: orryverducci/app
     environment:
       TZ: Europe/London
@@ -13,6 +14,7 @@ services:
   server:
     build:
       context: .
+      dockerfile: docker/nginx/Dockerfile
     image: orryverducci/server
     environment:
       TZ: Europe/London

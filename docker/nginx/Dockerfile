@@ -22,11 +22,14 @@ RUN npm run production
 
 FROM nginx:latest
 
+# Define variable for the Nginx configuration file name
+ARG conf
+
 # Set working directory
 WORKDIR /usr/orryweb
 
 # Copy Nginx config
-COPY ./docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/nginx/$conf /etc/nginx/conf.d/default.conf
 
 # Copy website files
 COPY --from=frontend-build /tmp/orryweb .
