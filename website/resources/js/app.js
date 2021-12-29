@@ -1,6 +1,6 @@
 import * as Turbo from "@hotwired/turbo";
-import { Application } from "@hotwired/stimulus"
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers"
+import { Application } from "@hotwired/stimulus";
+import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/Standard.js";
 
