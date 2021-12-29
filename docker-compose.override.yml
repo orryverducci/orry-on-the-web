@@ -1,6 +1,11 @@
 version: '3.7'
 services:
 
+  app:
+    build:
+      args:
+        conf: staging.php.ini
+
   server:
     build:
       args:
