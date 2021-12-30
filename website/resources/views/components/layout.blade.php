@@ -17,6 +17,9 @@
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script src="{{ mix('/js/app.js') }}" type="text/javascript" async></script>
+        @if (App::environment('production'))
+        <script src='https://static.cloudflareinsights.com/beacon.min.js' defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>
+        @endif
     </head>
     <body>
         <header class="container-fluid">
