@@ -68,7 +68,7 @@ $RECYCLE.BIN/
 ### macOS ###
 ## Ignore macOS temporary and system files.
 
-# General ssytem files
+# General system files
 .DS_Store
 .AppleDouble
 .LSOverride
