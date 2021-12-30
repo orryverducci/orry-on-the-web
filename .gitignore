@@ -1,44 +1,42 @@
 ### Laravel ###
 
-# Composer vendor folder
-website/vendor/
-
 # Environment files
 .env
 .env.backup
 
-# Webpack hot module replacement
-website/public/hot/
-
-# Storage symlink
-website/public/storage/
-
-# Secret keys
-website/storage/*.key
-
 # PHPUnit
 .phpunit.result.cache
 
+# SQLite Databases
+*.sqlite*
+
+# Composer vendor folder
+/website/vendor/
+
 # Homestead
-website/Homestead.json
-website/Homestead.yaml
+/website/Homestead.json
+/website/Homestead.yaml
+
+# Application storage
+/website/public/storage/
+/website/storage/*.key
 
 # Compiled assets
-website/public/css/
-website/public/js/
-website/public/fonts
-website/public/mix-manifest.json
+/website/public/mix-manifest.json
+/website/public/css/
+/website/public/fonts/
+/website/public/hot/
+/website/public/js/
 
 ### Node ###
 
 # Dependency directories
-*/node_modules/
+node_modules/
 
 # Optional npm cache directory
-.npm
+.npm/
 
-### Windows ###
-## Ignore Windows temporary and system files.
+### Windows Temporary and System Files ###
 
 # Windows thumbnail cache files
 Thumbs.db
@@ -55,18 +53,10 @@ ehthumbs_vista.db
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
 # Windows shortcuts
 *.lnk
 
-### macOS ###
-## Ignore macOS temporary and system files.
+### macOS Temporary and System Files ###
 
 # General system files
 .DS_Store
@@ -95,17 +85,16 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### Linux ###
-## Ignore Linux temporary and system files.
+### Linux Temporary and System Files ###
 
-# temporary files which can be created if a process still has a handle open of a deleted file
+# Temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
 
 # KDE directory preferences
 .directory
 
 # Linux trash folder which might appear on any partition or disk
-.Trash-*
+.Trash-*/
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
