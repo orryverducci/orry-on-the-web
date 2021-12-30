@@ -5,6 +5,7 @@ services:
     build:
       args:
         conf: staging.php.ini
+        env: staging.env
 
   server:
     build:

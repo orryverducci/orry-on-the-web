@@ -1,7 +1,8 @@
 FROM php:8.1-fpm
 
-# Define variable for the php configuration file name
+# Define variables for the php configuration file and environment file
 ARG conf
+ARG env
 
 # Set working directory
 WORKDIR /usr/orryweb
@@ -28,6 +29,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copy website files
 COPY ./website .
+
+# Copy environment file
+COPY ./docker/php/$env ./.env
 
 # Set permissions
 RUN chown -R www-data:www-data /usr/orryweb

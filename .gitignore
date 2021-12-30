@@ -3,6 +3,7 @@
 # Environment files
 .env
 .env.backup
+production.env
 
 # PHPUnit
 .phpunit.result.cache

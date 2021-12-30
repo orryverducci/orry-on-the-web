@@ -5,6 +5,7 @@ services:
     build:
       args:
         conf: production.php.ini
+        env: production.env
     restart: always
 
   server:
