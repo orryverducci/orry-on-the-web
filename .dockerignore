@@ -1,0 +1,125 @@
+### Laravel ###
+
+# Environment files
+.env
+.env.backup
+
+# PHPUnit
+.phpunit.result.cache
+
+# SQLite Databases
+*.sqlite*
+
+# Composer vendor folder
+website/vendor/
+
+# Homestead
+website/Homestead.json
+website/Homestead.yaml
+
+# Application storage
+website/public/storage/
+website/storage/*.key
+website/storage/app/*
+!website/storage/app/public/
+website/storage/app/public/*
+website/storage/debugbar/*
+website/storage/framework/compiled.php
+website/storage/framework/config.php
+website/storage/framework/down
+website/storage/framework/events.scanned.php
+website/storage/framework/maintenance.php
+website/storage/framework/routes.php
+website/storage/framework/routes.scanned.php
+website/storage/framework/schedule-*
+website/storage/framework/services.json
+website/storage/framework/cache/*
+!website/storage/framework/cache/data/
+website/storage/framework/cache/data/*
+website/storage/framework/sessions/*
+website/storage/framework/testing/*
+website/storage/framework/views/*
+website/storage/logs/*
+
+# Compiled assets
+website/public/mix-manifest.json
+website/public/css/
+website/public/fonts/
+website/public/hot/
+website/public/js/
+
+### Git ###
+
+.git/
+.gitignore
+
+### Node ###
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm/
+
+### Windows Temporary and System Files ###
+
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+### macOS Temporary and System Files ###
+
+# General system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Linux Temporary and System Files ###
+
+# Temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*/
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
