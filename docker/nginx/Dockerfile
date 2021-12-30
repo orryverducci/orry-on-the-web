@@ -32,4 +32,4 @@ WORKDIR /usr/orryweb
 COPY ./docker/nginx/$conf /etc/nginx/conf.d/default.conf
 
 # Copy website files
-COPY --from=frontend-build /tmp/orryweb .
+COPY --from=frontend-build /tmp/orryweb/public ./public
