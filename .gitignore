@@ -20,6 +20,15 @@
 # Application storage
 /website/public/storage/
 /website/storage/*.key
+/website/storage/framework/compiled.php
+/website/storage/framework/config.php
+/website/storage/framework/down
+/website/storage/framework/events.scanned.php
+/website/storage/framework/maintenance.php
+/website/storage/framework/routes.php
+/website/storage/framework/routes.scanned.php
+/website/storage/framework/schedule-*
+/website/storage/framework/services.json
 
 # Compiled assets
 /website/public/mix-manifest.json
