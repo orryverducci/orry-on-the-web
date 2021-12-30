@@ -28,13 +28,10 @@ COPY ./docker/php/$conf "$PHP_INI_DIR/conf.d/local.ini"
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copy website files
-COPY ./website .
+COPY --chown=www-data:www-data ./website .
 
 # Copy environment file
-COPY ./docker/php/$env ./.env
-
-# Set permissions
-RUN chown -R www-data:www-data /usr/orryweb
+COPY --chown=www-data:www-data ./docker/php/$env ./.env
 
 # Install Laravel dependencies
 RUN composer install
