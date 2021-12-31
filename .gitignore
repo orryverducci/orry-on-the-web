@@ -12,11 +12,11 @@ production.env
 *.sqlite*
 
 # Composer vendor folder
-/website/vendor/
+website/vendor/
 
 # Homestead
-/website/Homestead.json
-/website/Homestead.yaml
+website/Homestead.json
+website/Homestead.yaml
 
 # Application storage
 website/public/storage/
