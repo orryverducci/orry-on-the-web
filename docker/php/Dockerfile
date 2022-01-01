@@ -11,7 +11,7 @@ WORKDIR /tmp/orryweb
 COPY ./website .
 
 # Install Laravel dependencies
-RUN composer install
+RUN composer install --optimize-autoloader --no-dev
 
 #########################
 ## Server container image
@@ -48,3 +48,6 @@ COPY --from=backend-build --chown=www-data:www-data /tmp/orryweb/ .
 
 # Copy environment file
 COPY --chown=www-data:www-data ./docker/php/$env ./.env
+
+# Optimise for production
+RUN php artisan config:cache && php artisan route:cache && php artisan view:cache
