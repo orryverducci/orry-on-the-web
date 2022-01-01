@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Orry on the Web'),
+    'name' => 'Orry on the Web',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', null),
+    'asset_url' => null,
 
     /*
     |--------------------------------------------------------------------------
