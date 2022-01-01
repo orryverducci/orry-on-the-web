@@ -48,7 +48,3 @@ COPY --from=backend-build --chown=www-data:www-data /tmp/orryweb/ .
 
 # Copy environment file
 COPY --chown=www-data:www-data ./docker/php/$env ./.env
-
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-CMD ["php-fpm"]
