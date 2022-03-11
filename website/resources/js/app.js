@@ -1,6 +1,5 @@
 import * as Turbo from "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/Standard.js";
 
@@ -17,5 +16,3 @@ figlet.text("Hello!", { font: "Standard" }, function(err, data) {
 });
 
 const application = Application.start();
-const context = require.context("./controllers", true, /\.js$/);
-application.load(definitionsFromContext(context));

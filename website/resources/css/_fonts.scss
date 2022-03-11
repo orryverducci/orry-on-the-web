@@ -1,3 +1,19 @@
-@import "~@fontsource/montserrat/200.css";
-@import "~@fontsource/montserrat/400.css";
-@import "~@fontsource/montserrat/700.css";
+@use "@fontsource/montserrat/scss/mixins" as Montserrat;
+
+@include Montserrat.fontFace(
+  $weight: 200,
+  $display: fallback,
+  $fontDir: "../fonts"
+);
+
+@include Montserrat.fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: "../fonts"
+);
+
+@include Montserrat.fontFace(
+  $weight: 800,
+  $display: fallback,
+  $fontDir: "../fonts"
+);

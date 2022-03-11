@@ -2,23 +2,31 @@
     "private": true,
     "scripts": {
         "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
+        "development": "gulp'",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "gulp"
     },
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.1",
-        "@hotwired/stimulus-webpack-helpers": "^1.0.1",
-        "@hotwired/turbo": "*",
+        "@hotwired/turbo": "^7.1.0",
+        "@rollup/plugin-commonjs": "^21.0.2",
+        "@rollup/plugin-node-resolve": "^13.1.3",
+        "@rollup/stream": "^2.0.0",
+        "@types/figlet": "^1.5.4",
+        "@types/gulp": "^4.0.9",
+        "@types/gulp-sass": "^5.0.0",
+        "@types/vinyl-source-stream": "^0.0.30",
         "bootstrap": "^5.0.0",
         "figlet": "^1.5.2",
-        "laravel-mix": "^6.0.6",
-        "resolve-url-loader": "^4.0.0",
-        "sass": "^1.32.12",
-        "sass-loader": "^12.4.0"
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "rollup": "^2.70.0",
+        "rollup-plugin-polyfill-node": "^0.8.0",
+        "sass": "^1.47.0",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4",
+        "vinyl-source-stream": "^2.0.0"
     },
     "dependencies": {
         "@fontsource/montserrat": "^4.4.5"

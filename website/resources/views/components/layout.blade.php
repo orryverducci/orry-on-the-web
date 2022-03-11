@@ -15,8 +15,8 @@
         <meta name="msvalidate.01" content="8BD1560DF5967630C8CEE1C55F8A75A9">
         <link href="{{ config('app.url') }}{{ Request::path() }}" rel="canonical">
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
-        <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-        <script src="{{ mix('/js/app.js') }}" type="text/javascript" async></script>
+        <link href="/css/app.css" rel="stylesheet">
+        <script src="/js/app.js" type="text/javascript" async></script>
         @if (App::environment('production'))
         <script src='https://static.cloudflareinsights.com/beacon.min.js' defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>
         @endif
