@@ -7,13 +7,34 @@
 );
 
 @include Montserrat.fontFace(
+  $weight: 200,
+  $style: "italic",
+  $display: fallback,
+  $fontDir: "../fonts"
+);
+
+@include Montserrat.fontFace(
   $weight: 400,
   $display: fallback,
   $fontDir: "../fonts"
 );
 
 @include Montserrat.fontFace(
+  $weight: 400,
+  $style: "italic",
+  $display: fallback,
+  $fontDir: "../fonts"
+);
+
+@include Montserrat.fontFace(
   $weight: 800,
+  $display: fallback,
+  $fontDir: "../fonts"
+);
+
+@include Montserrat.fontFace(
+  $weight: 800,
+  $style: "italic",
   $display: fallback,
   $fontDir: "../fonts"
 );
