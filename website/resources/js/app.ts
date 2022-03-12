@@ -3,7 +3,7 @@ import { Application } from "@hotwired/stimulus";
 import * as figlet from "figlet";
 import standard from "figlet/importable-fonts/Standard.js";
 
-figlet.parseFont('Standard', standard);
+figlet.parseFont("Standard", standard);
 
 figlet.text("Hello!", { font: "Standard" }, function(err, data) {
     if (err) {

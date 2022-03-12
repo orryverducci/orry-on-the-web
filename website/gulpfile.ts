@@ -1,28 +1,28 @@
-import { dest, parallel, src } from 'gulp';
-import ts from 'gulp-typescript';
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-import rollup from '@rollup/stream';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import nodePolyfills from 'rollup-plugin-polyfill-node';
-import typescript from '@rollup/plugin-typescript';
-import source from 'vinyl-source-stream';
+import { dest, parallel, src } from "gulp";
+import ts from "gulp-typescript";
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
+import rollup from "@rollup/stream";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import nodePolyfills from "rollup-plugin-polyfill-node";
+import typescript from "@rollup/plugin-typescript";
+import source from "vinyl-source-stream";
 
 const sass = gulpSass(dartSass);
 
 function buildcss() {
-    return src('./resources/css/app.scss')
+    return src("./resources/css/app.scss")
         .pipe(sass({
-            includePaths: ['node_modules']
+            includePaths: ["node_modules"]
         })
-        .on('error', sass.logError))
-        .pipe(dest('./public/css'));
+        .on("error", sass.logError))
+        .pipe(dest("./public/css"));
 }
 
 function buildjs() {
     return rollup({
-        input: './resources/js/app.ts',
+        input: "./resources/js/app.ts",
         plugins: [
             typescript({
                 compilerOptions: {
@@ -36,16 +36,16 @@ function buildjs() {
             nodeResolve()
         ],
         output: {
-            format: 'iife'
+            format: "iife"
         }
     })
-    .pipe(source('app.js'))
-    .pipe(dest('./public/js'));
+    .pipe(source("app.js"))
+    .pipe(dest("./public/js"));
 }
 
 function copyfonts() {
-    return src('./node_modules/@fontsource/montserrat/files/**')
-        .pipe(dest('./public/fonts'));
+    return src("./node_modules/@fontsource/montserrat/files/**")
+        .pipe(dest("./public/fonts"));
 }
 
 exports.buildcss = buildcss;
