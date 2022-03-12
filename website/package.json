@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "npm run development",
-        "development": "gulp'",
+        "development": "gulp",
         "prod": "npm run production",
         "production": "gulp"
     },
