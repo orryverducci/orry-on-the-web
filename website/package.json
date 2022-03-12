@@ -4,7 +4,7 @@
         "dev": "npm run development",
         "development": "gulp",
         "prod": "npm run production",
-        "production": "gulp"
+        "production": "NODE_ENV=production gulp"
     },
     "devDependencies": {
         "@fontsource/montserrat": "^4.4.5",
@@ -24,6 +24,7 @@
         "gulp-sass": "^5.1.0",
         "rollup": "^2.70.0",
         "rollup-plugin-polyfill-node": "^0.8.0",
+        "rollup-plugin-terser": "^7.0.2",
         "sass": "^1.47.0",
         "ts-node": "^10.4.0",
         "typescript": "^4.5.4",
