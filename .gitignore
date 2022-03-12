@@ -46,6 +46,12 @@ node_modules/
 # Optional npm cache directory
 .npm/
 
+### Nginx ###
+
+# Certificates
+*.pem
+*.key
+
 ### Windows Temporary and System Files ###
 
 # Windows thumbnail cache files

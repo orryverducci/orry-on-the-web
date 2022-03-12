@@ -15,3 +15,6 @@ services:
     restart: always
     ports:
       - 80:80
+    volumes:
+      - ./docker/cert.pem:/etc/ssl/cert.pem:ro
+      - ./docker/cert.key:/etc/ssl/cert.key:ro
