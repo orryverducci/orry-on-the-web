@@ -6,6 +6,7 @@ import rollup from '@rollup/stream';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
+import typescript from '@rollup/plugin-typescript';
 import source from 'vinyl-source-stream';
 
 const sass = gulpSass(dartSass);
@@ -21,8 +22,15 @@ function buildcss() {
 
 function buildjs() {
     return rollup({
-        input: './resources/js/app.js',
+        input: './resources/js/app.ts',
         plugins: [
+            typescript({
+                compilerOptions: {
+                    lib: ["es5", "es6", "dom"],
+                    moduleResolution: "node",
+                    target: "es6"
+                }
+            }),
             commonjs(),
             nodePolyfills(),
             nodeResolve()
