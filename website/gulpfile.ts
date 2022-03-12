@@ -1,5 +1,4 @@
 import { dest, parallel, src } from "gulp";
-import ts from "gulp-typescript";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rollup from "@rollup/stream";

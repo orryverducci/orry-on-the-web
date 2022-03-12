@@ -21,7 +21,6 @@
         "figlet": "^1.5.2",
         "gulp": "^4.0.2",
         "gulp-sass": "^5.1.0",
-        "gulp-typescript": "^6.0.0-alpha.1",
         "rollup": "^2.70.0",
         "rollup-plugin-polyfill-node": "^0.8.0",
         "sass": "^1.47.0",
