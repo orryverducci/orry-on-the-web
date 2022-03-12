@@ -33,15 +33,6 @@ function buildjs() {
     })
     .pipe(source('app.js'))
     .pipe(dest('./public/js'));
-
-
-    return src('./resources/js/app.js')
-        .pipe(ts({
-            allowJs: true,
-            noImplicitAny: true,
-            outFile: 'app.js'
-        }))
-        .pipe(dest('./public/js'));
 }
 
 function copyfonts() {
