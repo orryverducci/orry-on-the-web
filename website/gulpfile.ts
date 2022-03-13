@@ -57,7 +57,12 @@ function copyfonts() {
         .pipe(dest("./public/fonts"));
 }
 
+function copyicons() {
+    return src("./node_modules/bootstrap-icons/bootstrap-icons.svg")
+        .pipe(dest("./public/icons"));
+}
+
 exports.buildcss = buildcss;
 exports.buildjs = buildjs;
 exports.copyfonts = copyfonts;
-exports.default = parallel(buildcss, buildjs, copyfonts);
+exports.default = parallel(buildcss, buildjs, copyfonts, copyicons);
