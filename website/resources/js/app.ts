@@ -15,4 +15,5 @@ figlet.text("Hello!", { font: "Standard" }, function(err, data) {
     console.info("Want to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web");
 });
 
+const turbo = Turbo.start();
 const application:Application = Application.start();
