@@ -21,7 +21,7 @@
         <script src='https://static.cloudflareinsights.com/beacon.min.js' defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>
         @endif
     </head>
-    <body>
+    <body {{ $attributes }}>
         <header class="container-fluid">
             <div class="row">
                 <div class="col">
