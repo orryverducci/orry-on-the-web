@@ -8,7 +8,7 @@
 
 @include Montserrat.fontFace(
   $weight: 400,
-  $style: "italic",
+  $style: italic,
   $display: fallback,
   $fontDir: "../fonts"
 );
@@ -21,7 +21,7 @@
 
 @include Montserrat.fontFace(
   $weight: 800,
-  $style: "italic",
+  $style: italic,
   $display: fallback,
   $fontDir: "../fonts"
 );
