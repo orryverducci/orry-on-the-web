@@ -14,13 +14,13 @@
 );
 
 @include Montserrat.fontFace(
-  $weight: 800,
+  $weight: 600,
   $display: fallback,
   $fontDir: "../fonts"
 );
 
 @include Montserrat.fontFace(
-  $weight: 800,
+  $weight: 600,
   $style: italic,
   $display: fallback,
   $fontDir: "../fonts"
