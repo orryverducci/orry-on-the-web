@@ -1,5 +1,9 @@
 @use "@material/animation";
 
+.header-white header {
+    color: #fff;
+}
+
 header {
     display: flex;
     height: 4rem;
