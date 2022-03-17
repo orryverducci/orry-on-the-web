@@ -1,0 +1,211 @@
+@use "@material/animation";
+
+header {
+    display: flex;
+    height: 4rem;
+    position: absolute;
+
+    @include media-breakpoint-down(md) {
+        height: 3.5rem;
+    }
+
+    &.container-fluid {
+        @include media-breakpoint-only(sm) {
+            padding-right: 0.5rem;
+        }
+    }
+
+    &.menu-visible {
+        color: #FFF;
+
+        nav {
+            height: 100vh;
+        }
+
+        #menu-icon span {
+            left: 0.2rem;
+            top: 1.05rem + 0.3rem;
+
+            &:nth-child(1), &:nth-child(6) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2), &:nth-child(5) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(3), &:nth-child(4) {
+                opacity: 0;
+            }
+
+            &:nth-child(2n) {
+                left: 1rem - 0.2rem;
+            }
+
+            &:nth-child(n+3) {
+                top: 0.6rem + 1.05rem;
+            }
+    
+            &:nth-child(n+5) {
+                top: 1.2rem + 1.05rem - 0.3rem;
+            }
+        }
+    }
+}
+
+#site-logo {
+    flex: 1 0 content;
+
+    @include media-breakpoint-down(md) {
+        position: relative;
+        z-index: 1;
+    }
+
+    svg {
+        height: 3rem;
+        margin: 0.7rem 0 0.3rem 0;
+        transition: color 0.4s;
+
+        @include media-breakpoint-down(md) {
+            height: 2.5rem;
+        }
+    }
+}
+
+nav {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+        background: #595959;
+        color: #FFF;
+        display: block;
+        height: 0vh;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        transition: height 0.8s animation.$standard-curve-timing-function;
+        width: 100vw;
+        z-index: 0;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            padding-top: 4rem;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        color: inherit;
+        display: block;
+        font-weight: 600;
+        line-height: 4rem;
+        padding: 0 1rem;
+        text-decoration: none;
+        transition: opacity 0.25s;
+
+        @include media-breakpoint-down(md) {
+            line-height: 3.5rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 2em;
+            line-height: 1em;
+            padding: 1rem;
+        }
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    &:hover a {
+        opacity: 0.3;
+
+        @include media-breakpoint-down(sm) {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    svg {
+        fill: currentColor;
+        height: 1.3em;
+        margin-right: 0.5em;
+        vertical-align: text-top;
+        width: 1.3em;
+    }
+
+    #social-icons {
+        margin-left: 0.5rem;
+
+        @include media-breakpoint-only(sm) {
+            display: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            padding: 0 0.5rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1em;
+                padding: 1rem;
+            }
+        }   
+
+        svg {
+            margin-right: 0;
+        }
+    }
+}
+
+#menu-icon {
+    color: inherit;
+    display: none;
+    position: relative;
+    width: 2rem;
+
+    @include media-breakpoint-down(sm) {
+        display: block;
+        z-index: 1;
+    }
+
+    span {
+        background-color: currentColor;
+        height: 0.2rem;
+        left: 0;
+        position: absolute;
+        top: 1.05rem;
+        transition: 0.4s;
+        width: 1rem;
+
+        &:nth-child(2n) {
+            left: 1rem;
+        }
+
+        &:nth-child(n+3) {
+            top: 0.6rem + 1.05rem;
+        }
+
+        &:nth-child(n+5) {
+            top: 1.2rem + 1.05rem;
+        }
+    }
+}

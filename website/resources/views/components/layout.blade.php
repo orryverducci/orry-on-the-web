@@ -22,26 +22,32 @@
         @endif
     </head>
     <body {{ $attributes }}>
-        <header class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    @if (date("n") == "12")
-                    <img src="/images/logo-xmas.svg" alt="Orry on the Web">
-                    @else
-                    <img src="/images/logo.svg" alt="Orry on the Web">
-                    @endif
-                </div>
-                <div id="menu-icon" class="col-auto">
-                    <a href="#">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </a>
-                </div>
-                <nav class="col-auto">
-                    
-                </nav>
+        <header class="container-fluid" data-controller="header" data-header-target="menu">
+            <div id="site-logo">
+                @if (date("n") == "12")
+                <img src="/images/logo-xmas.svg" alt="Orry on the Web">
+                @else
+                <img src="/images/logo.svg" alt="Orry on the Web">
+                @endif
             </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ route('home') }}"><svg aria-hidden="true"><use xlink:href="/icons/bootstrap-icons.svg#house"/></svg>Home</a></li>
+                </ul>
+                <ul id="social-icons">
+                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><svg role="img" aria-label="Twitter"><use href="/icons/bootstrap-icons.svg#twitter"/></svg></a></li>
+                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><svg role="img" aria-label="GitHub"><use href="/icons/bootstrap-icons.svg#github"/></svg></a></li>
+                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><svg role="img" aria-label="LinkedIn"><use href="/icons/bootstrap-icons.svg#linkedin"/></svg></a></li>
+                </ul>
+            </nav>
+            <a id="menu-icon" href="#" data-action="header#toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </header>
         <main role="main">
             {{ $slot }}
