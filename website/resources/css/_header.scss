@@ -54,7 +54,7 @@ header {
 }
 
 #site-logo {
-    flex: 1 0 content;
+    flex: 1 0 0;
 
     @include media-breakpoint-down(md) {
         position: relative;

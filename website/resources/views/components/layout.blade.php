@@ -25,9 +25,9 @@
         <header class="container-fluid" data-controller="header" data-header-target="menu">
             <div id="site-logo">
                 @if (date("n") == "12")
-                <img src="/images/logo-xmas.svg" alt="Orry on the Web">
+                <svg role="img" aria-label="Orry on the Web"><use href="/images/logo.svg#xmas-logo"/></svg>
                 @else
-                <img src="/images/logo.svg" alt="Orry on the Web">
+                <svg role="img" aria-label="Orry on the Web"><use href="/images/logo.svg#logo"/></svg>
                 @endif
             </div>
             <nav>
