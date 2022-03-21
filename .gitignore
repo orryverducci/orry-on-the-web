@@ -34,7 +34,7 @@ website/storage/framework/services.json
 # Compiled assets
 website/public/css/
 website/public/fonts/
-website/public/icons/
+website/public/images/
 website/public/js/
 
 ### Node ###

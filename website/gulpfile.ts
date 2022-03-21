@@ -8,6 +8,7 @@ import nodePolyfills from "rollup-plugin-polyfill-node";
 import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
 import source from "vinyl-source-stream";
+import merge from "merge-stream";
 
 const sass = gulpSass(dartSass);
 
@@ -57,12 +58,17 @@ function copyfonts() {
         .pipe(dest("./public/fonts"));
 }
 
-function copyicons() {
-    return src("./node_modules/bootstrap-icons/bootstrap-icons.svg")
-        .pipe(dest("./public/icons"));
+function copyimages() {
+    let icons = src("./node_modules/bootstrap-icons/bootstrap-icons.svg")
+        .pipe(dest("./public/images"));
+
+    let images = src("./resources/images/**")
+        .pipe(dest("./public/images"));
+    
+    return merge(icons, images);
 }
 
 exports.buildcss = buildcss;
 exports.buildjs = buildjs;
 exports.copyfonts = copyfonts;
-exports.default = parallel(buildcss, buildjs, copyfonts, copyicons);
+exports.default = parallel(buildcss, buildjs, copyfonts, copyimages);

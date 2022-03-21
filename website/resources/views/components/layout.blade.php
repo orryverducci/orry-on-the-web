@@ -32,12 +32,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="{{ route('home') }}"><svg aria-hidden="true"><use xlink:href="/icons/bootstrap-icons.svg#house"/></svg>Home</a></li>
+                    <li><a href="{{ route('home') }}"><svg aria-hidden="true"><use xlink:href="/images/bootstrap-icons.svg#house"/></svg>Home</a></li>
                 </ul>
                 <ul id="social-icons">
-                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><svg role="img" aria-label="Twitter"><use href="/icons/bootstrap-icons.svg#twitter"/></svg></a></li>
-                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><svg role="img" aria-label="GitHub"><use href="/icons/bootstrap-icons.svg#github"/></svg></a></li>
-                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><svg role="img" aria-label="LinkedIn"><use href="/icons/bootstrap-icons.svg#linkedin"/></svg></a></li>
+                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><svg role="img" aria-label="Twitter"><use href="/images/bootstrap-icons.svg#twitter"/></svg></a></li>
+                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><svg role="img" aria-label="GitHub"><use href="/images/bootstrap-icons.svg#github"/></svg></a></li>
+                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><svg role="img" aria-label="LinkedIn"><use href="/images/bootstrap-icons.svg#linkedin"/></svg></a></li>
                 </ul>
             </nav>
             <a id="menu-icon" href="#" data-action="header#toggleMenu">
