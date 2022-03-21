@@ -9,6 +9,8 @@ import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
 import source from "vinyl-source-stream";
 import merge from "merge-stream";
+import sourcemaps from "gulp-sourcemaps";
+import buffer from "vinyl-buffer";
 
 const sass = gulpSass(dartSass);
 
@@ -16,11 +18,13 @@ function buildcss() {
     let style = process.env.NODE_ENV == "production" ? "compressed" as const : "expanded" as const;
 
     return src("./resources/css/app.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ["node_modules"],
             outputStyle: style
         })
         .on("error", sass.logError))
+        .pipe(sourcemaps.write("."))
         .pipe(dest("./public/css"));
 }
 
@@ -46,10 +50,23 @@ function buildjs() {
         input: "./resources/js/app.ts",
         plugins: rollupPlugins,
         output: {
-            format: "iife"
+            format: "iife",
+            sourcemap: true,
+            sourcemapPathTransform: (relativeSourcePath) => {
+                if (relativeSourcePath.startsWith("resources/js/")) {
+                    return relativeSourcePath.split("/").slice(2).join("/");
+                } else {
+                    return relativeSourcePath;
+                }
+            }
         }
     })
     .pipe(source("app.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({
+        loadMaps: true
+    }))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("./public/js"));
 }
 
