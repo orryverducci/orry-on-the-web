@@ -54,8 +54,13 @@ function buildjs() {
 }
 
 function copyfonts() {
-    return src("./node_modules/@fontsource/montserrat/files/**")
+    let montserrat = src("./node_modules/@fontsource/montserrat/files/**")
         .pipe(dest("./public/fonts"));
+
+    let fonts = src("./resources/fonts/**")
+        .pipe(dest("./public/fonts"));
+
+    return merge(montserrat, fonts);
 }
 
 function copyimages() {
