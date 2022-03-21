@@ -21,3 +21,4 @@ services:
       - ./docker/orryverducci.co.uk.key:/etc/ssl/orryverducci.co.uk.key:ro
       - ./docker/orryverducci.uk.pem:/etc/ssl/orryverducci.uk.pem:ro
       - ./docker/orryverducci.uk.key:/etc/ssl/orryverducci.uk.key:ro
+      - ./docker/ccloudflare.pem:/etc/ssl/cloudflare.pem:ro
