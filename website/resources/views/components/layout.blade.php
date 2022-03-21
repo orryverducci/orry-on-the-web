@@ -21,7 +21,7 @@
         <script src='https://static.cloudflareinsights.com/beacon.min.js' defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>
         @endif
     </head>
-    <body {{ $attributes }}>
+    <body>
         <header class="container-fluid" data-controller="header" data-header-target="menu">
             <div id="site-logo">
                 @if (date("n") == "12")
@@ -49,7 +49,7 @@
                 <span></span>
             </a>
         </header>
-        <main role="main">
+        <main role="main" {{ $attributes }}>
             {{ $slot }}
         </main>
     </body>
