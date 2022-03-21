@@ -17,5 +17,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./docker/cert.pem:/etc/ssl/cert.pem:ro
-      - ./docker/cert.key:/etc/ssl/cert.key:ro
+      - ./docker/orryverducci.co.uk.pem:/etc/ssl/orryverducci.co.uk.pem:ro
+      - ./docker/orryverducci.co.uk.key:/etc/ssl/orryverducci.co.uk.key:ro
+      - ./docker/orryverducci.uk.pem:/etc/ssl/orryverducci.uk.pem:ro
+      - ./docker/orryverducci.uk.key:/etc/ssl/orryverducci.uk.key:ro
