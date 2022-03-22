@@ -28,7 +28,7 @@
             'container-fluid',
             'overlay' => $headerOverlay,
             'background' => $headerBackground
-        ]) data-controller="header" data-header-target="menu">
+        ]) role="banner" data-controller="header" data-header-target="menu">
             <div id="site-logo">
                 @if (date("n") == "12")
                 <svg role="img" aria-label="Orry on the Web"><use href="/images/logo.svg#xmas-logo"/></svg>
