@@ -1,3 +1,5 @@
+@props(['headerOverlay' => false, 'headerBackground' => false])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -22,7 +24,11 @@
         @endif
     </head>
     <body>
-        <header class="container-fluid" data-controller="header" data-header-target="menu">
+        <header @class([
+            'container-fluid',
+            'overlay' => $headerOverlay,
+            'background' => $headerBackground
+        ]) data-controller="header" data-header-target="menu">
             <div id="site-logo">
                 @if (date("n") == "12")
                 <svg role="img" aria-label="Orry on the Web"><use href="/images/logo.svg#xmas-logo"/></svg>

@@ -1,13 +1,9 @@
 @use "@material/animation";
 
-.header-white header {
-    color: #fff;
-}
-
 header {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.03), 0 1px 1px rgba(0, 0, 0, 0.03);
     display: flex;
     height: 4rem;
-    position: absolute;
 
     @include media-breakpoint-down(md) {
         height: 3.5rem;
@@ -16,6 +12,17 @@ header {
     &.container-fluid {
         @include media-breakpoint-only(sm) {
             padding-right: 0.5rem;
+        }
+    }
+
+    &.overlay {
+        box-shadow: none;
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+
+        &.background {
+            background-color: rgba(0, 0, 0, 0.4);
         }
     }
 
@@ -211,5 +218,13 @@ nav {
         &:nth-child(n+5) {
             top: 1.2rem + 1.05rem;
         }
+    }
+}
+
+.header-padding {
+    padding-top: 4rem;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 3.5rem;
     }
 }
