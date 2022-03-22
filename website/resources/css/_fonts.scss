@@ -25,3 +25,21 @@
   $display: fallback,
   $fontDir: "../fonts"
 );
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCROSDMono.woff2") format("woff2"),
+       url("../fonts/VCROSDMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ModeSeven";
+  src: url("../fonts/ModeSeven.woff2") format("woff2"),
+       url("../fonts/ModeSeven.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

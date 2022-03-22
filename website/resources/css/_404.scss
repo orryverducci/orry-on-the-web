@@ -1,0 +1,109 @@
+@keyframes syncloss {
+    40% {
+        opacity: 1;
+        transform: skew(0, 0);
+    }
+    41% {
+        opacity: 0.8;
+        transform: skew(50deg, 0);
+    }
+    42% {
+        opacity: 0.8;
+        transform: skew(-80deg, 0)
+    }
+    43% {
+        opacity: 1;
+        transform: skew(0, 0)
+    }
+}
+
+.template-404 {
+    background: #eee;
+    height: 100vh;
+    position: relative;
+
+    #noise {
+        animation: fade 30ms infinite;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    #channel-block {
+        animation: syncloss 5s infinite;
+        color: #FFF;
+        font-family: "VCR OSD Mono", "Montserrat", Arial, Helvetica, sans-serif;
+        paint-order: stroke fill;
+        position: absolute;
+        right: 5%;
+        text-align: right;
+        text-transform: uppercase;
+        top: calc(5% + 4rem);
+        z-index: 1;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke: 0.5em #000;
+
+        p {
+            font-size: 6em;
+            line-height: 1em;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 4em;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    }
+
+    #error-info {
+        animation: syncloss 5s infinite;
+        background: #00f;
+        bottom: 10%;
+        color: #fff;
+        font-family: "ModeSeven", "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        left: 5%;
+        max-width: 50%;
+        padding: 1rem 2rem;
+        position: absolute;
+        z-index: 2;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 1em;
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-width: none;
+            right: 5%;
+        }
+
+        .top-line {
+            color: #ff0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &::after {
+        background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0px, transparent 1px, transparent 2px, rgba(0, 0,0, 0.3) 3px);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+}
