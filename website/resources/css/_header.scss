@@ -1,7 +1,10 @@
 @use "@material/animation";
 
-header {
+.header-white header {
     color: #fff;
+}
+
+header {
     display: flex;
     height: 4rem;
     position: absolute;
