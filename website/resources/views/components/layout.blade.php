@@ -1,4 +1,4 @@
-@props(['headerOverlay' => false, 'headerBackground' => false])
+@props(['description' => null, 'headerOverlay' => false, 'headerBackground' => false])
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -9,6 +9,9 @@
         <title>{{ $title }} - Orry on the Web</title>
         @else
         <title>Orry on the Web</title>
+        @endif
+        @if (isset($description))
+        <meta name="description" content="{{ $description }}">
         @endif
         @if (isset($themecolour))
         <meta name="theme-color" content="{{ $themecolour }}">
