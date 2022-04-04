@@ -12,9 +12,12 @@ figlet.text("Hello!", { font: "Standard" }, function(err, data) {
         console.error(err);
         return;
     }
-    console.info(data);
-    console.info("I see you there, poking around the code ;)");
-    console.info("Want to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web");
+
+    let figletText:string = `%c${data}`;
+    let messageText:string = "\nI see you there, poking around the code ;)";
+    messageText += "\nWant to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web";
+
+    console.info(figletText, "color: #52c41a", messageText);
 });
 
 const turbo = Turbo.start();
