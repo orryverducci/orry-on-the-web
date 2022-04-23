@@ -29,7 +29,7 @@
         "gulp-sass": "^5.1.0",
         "gulp-sourcemaps": "^3.0.0",
         "merge-stream": "^2.0.0",
-        "rollup": "^2.70.1",
+        "rollup": "^2.70.2",
         "rollup-plugin-polyfill-node": "^0.9.0",
         "rollup-plugin-terser": "^7.0.2",
         "sass": "^1.50.0",
