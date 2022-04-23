@@ -11,7 +11,7 @@
         "@hotwired/stimulus": "^3.0.1",
         "@hotwired/turbo": "^7.1.0",
         "@material/animation": "^13.0.0",
-        "@rollup/plugin-commonjs": "^21.0.3",
+        "@rollup/plugin-commonjs": "^21.1.0",
         "@rollup/plugin-node-resolve": "^13.2.1",
         "@rollup/plugin-typescript": "^8.3.1",
         "@rollup/stream": "^2.0.0",
