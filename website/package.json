@@ -23,7 +23,7 @@
         "@types/vinyl-buffer": "^1.0.0",
         "@types/vinyl-source-stream": "^0.0.30",
         "bootstrap": "^5.0.0",
-        "bootstrap-icons": "^1.8.2",
+        "bootstrap-icons": "^1.8.3",
         "figlet": "^1.5.2",
         "gulp": "^4.0.2",
         "gulp-sass": "^5.1.0",
