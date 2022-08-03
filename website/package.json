@@ -22,7 +22,7 @@
         "@types/merge-stream": "^1.1.2",
         "@types/vinyl-buffer": "^1.0.0",
         "@types/vinyl-source-stream": "^0.0.30",
-        "bootstrap": "^5.0.0",
+        "bootstrap": "^5.2.0",
         "bootstrap-icons": "^1.9.1",
         "figlet": "^1.5.2",
         "gulp": "^4.0.2",
