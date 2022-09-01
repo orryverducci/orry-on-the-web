@@ -15,7 +15,7 @@
         "@rollup/plugin-node-resolve": "^13.3.0",
         "@rollup/plugin-typescript": "^8.3.4",
         "@rollup/stream": "^2.0.0",
-        "@types/figlet": "^1.5.4",
+        "@types/figlet": "^1.5.5",
         "@types/gulp": "^4.0.9",
         "@types/gulp-sass": "^5.0.0",
         "@types/gulp-sourcemaps": "^0.0.35",
