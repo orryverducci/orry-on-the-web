@@ -1,27 +1,26 @@
 version: '3.7'
 services:
 
-  app:
-    build:
-      context: .
-      dockerfile: docker/php/Dockerfile
-    image: orryverducci/app
+  website:
+    build: .
+    image: orryverducci/website
+    ports:
+      - 8080:8080
     environment:
       TZ: Europe/London
     networks:
-      - app-network
+      - network
 
-  server:
-    build:
-      context: .
-      dockerfile: docker/nginx/Dockerfile
-    image: orryverducci/server
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - 8025:8025
     environment:
       TZ: Europe/London
     networks:
-      - app-network
+      - network
 
 networks:
 
-  app-network:
+  network:
     driver: bridge

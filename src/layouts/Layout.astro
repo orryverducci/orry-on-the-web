@@ -1,0 +1,92 @@
+---
+import "../styles/app.scss";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/400-italic.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/600-italic.css";
+import icons from "bootstrap-icons/bootstrap-icons.svg";
+
+// Set the layout properties
+export interface Props {
+    controller?: string;
+    description?: string;
+    headerBackground?: boolean;
+    headerOverlay?: boolean;
+    pageClass?: string;
+    title?: string;
+    themeColour?: string;
+}
+
+const { controller, description, headerBackground = false, headerOverlay = false, pageClass, title, themeColour } = Astro.props;
+
+// Set the canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Set the header CSS class list
+let headerClassList: Array<string> = new Array();
+headerClassList.push("container-fluid");
+if (headerBackground) {
+    headerClassList.push("background");
+}
+if (headerOverlay) {
+    headerClassList.push("overlay");
+}
+
+// Set the site logo
+let logo: string;
+let date: Date = new Date();
+if (date.getMonth() != 12) {
+    logo = "/images/logo.svg#logo";
+} else {
+    logo = "/images/logo.svg#xmas-logo"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {typeof title !== "undefined" ? <title>{title} - Orry on the Web</title> : <title>Orry on the Web</title>}
+        {typeof description !== "undefined" && <meta name="description" content={description}>}
+        {typeof themeColour !== "undefined" && <meta name="theme-color" content={themeColour}>}
+        <meta name="google-site-verification" content="nLUL7swGgc-k1Io-r5lZYk_i8aXedERKq6Mb6PEYUbY">
+        <meta name="msvalidate.01" content="8BD1560DF5967630C8CEE1C55F8A75A9">
+        <link href={canonicalURL} rel="canonical">
+        <link href="/favicon.ico" rel="icon" type="image/x-icon">
+        {import.meta.env.PROD && <script src="https://static.cloudflareinsights.com/beacon.min.js" defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>}
+		<meta name="generator" content={Astro.generator} />
+    </head>
+    <body>
+        <header class:list={headerClassList} role="banner" data-controller="header" data-header-target="menu">
+            <div id="site-logo">
+                <svg role="img" aria-label="Orry on the Web"><use href={logo}/></svg>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/"><svg aria-hidden="true"><use href={icons + "#house"}/></svg>Home</a></li>
+                </ul>
+                <ul id="social-icons">
+                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><svg role="img" aria-label="Twitter"><use href={icons + "#twitter"}/></svg></a></li>
+                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><svg role="img" aria-label="GitHub"><use href={icons + "#github"}/></svg></a></li>
+                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><svg role="img" aria-label="LinkedIn"><use href={icons + "#linkedin"}/></svg></a></li>
+                </ul>
+            </nav>
+            <a id="menu-icon" href="#" data-action="header#toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <main class={pageClass} role="main" data-controller={controller}>
+            <slot />
+        </main>
+    </body>
+</html>
+
+<script>
+    import "../frontend/app.ts";
+</script>

@@ -1,56 +1,19 @@
-### Laravel ###
+### Website ###
 
-# Environment files
+# Build output
+dist/
+.output/
+
+# Environment variables
 .env
-.env.backup
+.env.production
 
-# PHPUnit
-.phpunit.result.cache
+# Docker files
+docker/
+docker-compose.yml
 
-# SQLite Databases
-*.sqlite*
-
-# Composer vendor folder
-website/vendor/
-
-# Homestead
-website/Homestead.json
-website/Homestead.yaml
-
-# Application storage
-website/public/storage/
-website/storage/*.key
-website/storage/app/*
-!website/storage/app/public/
-website/storage/app/public/*
-website/storage/debugbar/*
-website/storage/framework/compiled.php
-website/storage/framework/config.php
-website/storage/framework/down
-website/storage/framework/events.scanned.php
-website/storage/framework/maintenance.php
-website/storage/framework/routes.php
-website/storage/framework/routes.scanned.php
-website/storage/framework/schedule-*
-website/storage/framework/services.json
-website/storage/framework/cache/*
-!website/storage/framework/cache/data/
-website/storage/framework/cache/data/*
-website/storage/framework/sessions/*
-website/storage/framework/testing/*
-website/storage/framework/views/*
-website/storage/logs/*
-
-# Compiled assets
-website/public/css/
-website/public/fonts/
-website/public/icons/
-website/public/js/
-
-### Git ###
-
-.git/
-.gitignore
+# Miscellaneous files
+README.md
 
 ### Node ###
 
@@ -59,6 +22,11 @@ node_modules/
 
 # Optional npm cache directory
 .npm/
+
+### Git ###
+.git/
+.gitattributes
+.gitignore
 
 ### Windows Temporary and System Files ###
 

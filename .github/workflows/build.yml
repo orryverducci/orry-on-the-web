@@ -4,18 +4,10 @@
 
 name: Build Web App
 
-on:
-  push:
-    paths:
-      - '.github/workflows/build.yml'
-      - 'website/**'
-  pull_request:
-    paths:
-      - '.github/workflows/build.yml'
-      - 'website/**'
+on: [push, pull_request]
 
 jobs:
-  frontend-build:
+  build:
     name: Build frontend
     runs-on: ubuntu-latest
 
@@ -33,32 +25,7 @@ jobs:
           node-version: lts/*
 
       - name: Install dependencies
-        working-directory: ./website
         run: npm install
 
-      - name: Run Gulp build
-        working-directory: ./website
-        run: npm run development
-
-  backend-setup:
-    name: Setup backend
-    runs-on: ubuntu-latest
-
-    permissions:
-      actions: read
-      contents: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: latest
-          extensions: mbstring, dom, fileinfo
-
-      - name: Install dependencies
-        working-directory: ./website
-        run: composer install --no-progress
-
+      - name: Run Astro build
+        run: npm run build
