@@ -1,0 +1,23 @@
+/*
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI='; script-src 'self' 'unsafe-eval' static.cloudflareinsights.com; connect-src 'self' cloudflareinsights.com; child-src 'none'; frame-ancestors 'none';
+  Strict-Transport-Security: max-age=10368000
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/images/*
+  Cache-Control: public
+  ! Content-Security-Policy
+  X-Robots-Tag: nosnippet
+
+/fonts/*
+  Cache-Control: public
+  ! Content-Security-Policy
+  X-Robots-Tag: nosnippet
+
+/assets/*
+  Cache-Control: public
+  ! Content-Security-Policy
+  X-Robots-Tag: nosnippet
