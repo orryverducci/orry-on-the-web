@@ -34,7 +34,7 @@ async function addHeaders(context: EventContext<unknown, string, Record<string, 
         crypto.getRandomValues(nonce);
         let nonceText: string = btoa(String.fromCharCode.apply(null, nonce));
 
-        response.headers.append("Content-Security-Policy", `default-src 'self'; style-src 'self' 'sha256-WAyOw4V+FqDc35lQPyRADLBWbuNK8ahvYEaQIYF1+Ps='; script-src 'self' 'nonce-${nonceText}' 'unsafe-eval' static.cloudflareinsights.com; connect-src 'self' cloudflareinsights.com; child-src 'none'; frame-ancestors 'none';`);
+        response.headers.append("Content-Security-Policy", `default-src 'self'; style-src 'self' 'sha256-WAyOw4V+FqDc35lQPyRADLBWbuNK8ahvYEaQIYF1+Ps='; script-src 'self' 'nonce-${nonceText}' 'unsafe-eval' static.cloudflareinsights.com; connect-src 'self' cloudflareinsights.com; child-src 'self'; frame-ancestors 'none';`);
     }
 
     response.headers.append("X-Content-Type-Options", "nosniff");
