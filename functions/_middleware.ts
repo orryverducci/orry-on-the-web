@@ -30,7 +30,7 @@ async function addHeaders(context: EventContext<unknown, string, Record<string, 
 
     // Add the security headers
     if (response.headers.has("Content-Type") && response.headers.get("Content-Type").includes("text/html")) {
-        response.headers.append("Content-Security-Policy", "default-src 'self'; style-src 'self' 'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI='; script-src 'self' 'unsafe-eval' static.cloudflareinsights.com; connect-src 'self' cloudflareinsights.com; child-src 'none'; frame-ancestors 'none';");
+        response.headers.append("Content-Security-Policy", "default-src 'self'; style-src 'self' 'sha256-WAyOw4V+FqDc35lQPyRADLBWbuNK8ahvYEaQIYF1+Ps='; script-src 'self' 'unsafe-eval' static.cloudflareinsights.com; connect-src 'self' cloudflareinsights.com; child-src 'none'; frame-ancestors 'none';");
     }
 
     response.headers.append("X-Content-Type-Options", "nosniff");
