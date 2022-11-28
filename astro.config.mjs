@@ -6,7 +6,9 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
     site: "https://orryverducci.co.uk",
     output: "server",
-    adapter: cloudflare(),
+    adapter: cloudflare({
+      mode: "directory"
+    }),
     vite: {
         build: {
           sourcemap: true,

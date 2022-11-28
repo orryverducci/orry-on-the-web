@@ -3,6 +3,7 @@
 # Build output
 dist/
 .output/
+functions/\[\[path\]\].js
 
 # Environment variables
 .env
