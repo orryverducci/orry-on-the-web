@@ -14,7 +14,7 @@
         "@hotwired/turbo": "^7.2.4",
         "@material/animation": "^14.0.0",
         "@types/figlet": "^1.5.5",
-        "astro": "^1.6.12",
+        "astro": "^1.8.0",
         "bootstrap": "^5.2.3",
         "bootstrap-icons": "^1.10.2",
         "figlet": "^1.5.2",
