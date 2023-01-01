@@ -9,6 +9,9 @@ export default defineConfig({
     adapter: cloudflare({
       mode: "directory"
     }),
+    experimental: {
+      prerender: true
+    },
     vite: {
         build: {
           sourcemap: true,
