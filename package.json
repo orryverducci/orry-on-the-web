@@ -18,7 +18,7 @@
         "bootstrap": "^5.2.3",
         "bootstrap-icons": "^1.10.3",
         "figlet": "^1.5.2",
-        "sass": "^1.57.1"
+        "sass": "^1.58.2"
     },
     "devDependencies": {
         "@cloudflare/workers-types": "^4.20230214.0",
