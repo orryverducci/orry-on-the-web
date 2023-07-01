@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "@astrojs/cloudflare": "^6.3.0",
-        "@fontsource/montserrat": "^5.0.2",
+        "@fontsource/montserrat": "^5.0.3",
         "@hotwired/stimulus": "^3.2.1",
         "@hotwired/turbo": "^7.3.0",
         "@material/animation": "^14.0.0",
