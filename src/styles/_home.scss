@@ -15,10 +15,6 @@
 
     @include media-breakpoint-down(sm) {
         font-size: 1.4em;
-
-        span {
-            display: block;
-        }
     }
 
     h1 {
@@ -32,6 +28,20 @@
 
         @include media-breakpoint-down(sm) {
             font-size: 2em;
+        }
+    }
+
+    span {
+        &:first-child::after {
+            content: ' ';
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: block;
         }
     }
 }
