@@ -1,5 +1,6 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
@@ -8,21 +9,22 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/cloudflare": "^6.5.1",
-        "@fontsource/montserrat": "^5.0.3",
-        "@hotwired/stimulus": "^3.2.1",
+        "@astrojs/cloudflare": "^7.5.1",
+        "@fontsource/montserrat": "^5.0.8",
+        "@hotwired/stimulus": "^3.2.2",
         "@hotwired/turbo": "^7.3.0",
         "@material/animation": "^14.0.0",
         "@types/figlet": "^1.5.6",
-        "astro": "^2.7.2",
-        "bootstrap": "^5.3.0",
-        "bootstrap-icons": "^1.10.5",
+        "astro": "^3.0.6",
+        "astro-icon": "^0.8.1",
+        "bootstrap": "^5.3.2",
         "figlet": "^1.6.0",
-        "sass": "^1.63.6"
+        "sass": "^1.69.0"
     },
     "devDependencies": {
-        "@cloudflare/workers-types": "^4.20230518.0",
-        "typescript": "^5.1.6",
-        "wrangler": "^3.1.1"
+        "@astrojs/check": "^0.2.0",
+        "@cloudflare/workers-types": "^4.20230922.0",
+        "typescript": "^5.2.2",
+        "wrangler": "^3.11.0"
     }
 }

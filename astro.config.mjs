@@ -5,10 +5,15 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
     site: "https://orryverducci.co.uk",
-    output: "server",
+    output: "hybrid",
     adapter: cloudflare({
       mode: "directory"
     }),
+    image: {
+      service: {
+        entrypoint: 'astro/assets/services/noop'
+      }
+    },
     vite: {
         build: {
           sourcemap: true,
