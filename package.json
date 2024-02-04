@@ -22,7 +22,7 @@
         "sass": "^1.70.0"
     },
     "devDependencies": {
-        "@astrojs/check": "^0.3.4",
+        "@astrojs/check": "^0.4.1",
         "@cloudflare/workers-types": "^4.20240129.0",
         "typescript": "^5.3.3",
         "wrangler": "^3.26.0"
