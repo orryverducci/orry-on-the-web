@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 import "../styles/app.scss";
 import "@fontsource/montserrat/400.css";
 import "@fontsource/montserrat/400-italic.css";
@@ -64,12 +64,12 @@ if (date.getMonth() != 12) {
             </div>
             <nav>
                 <ul>
-                    <li><a href="/"><Icon pack="bi" name="house" aria-hidden="true" />Home</a></li>
+                    <li><a href="/"><Icon name="bi:house" aria-hidden="true" />Home</a></li>
                 </ul>
                 <ul id="social-icons">
-                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><Icon pack="bi" name="twitter" role="img" aria-label="Twitter" /></a></li>
-                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><Icon pack="bi" name="github" role="img" aria-label="GitHub" /></a></li>
-                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><Icon pack="bi" name="linkedin" role="img" aria-label="LinkedIn" /></a></li>
+                    <li><a href="https://twitter.com/orryverducci" title="Twitter" target="_blank"><Icon name="bi:twitter" role="img" aria-label="Twitter" /></a></li>
+                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank"><Icon name="bi:github" role="img" aria-label="GitHub" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank"><Icon name="bi:linkedin" role="img" aria-label="LinkedIn" /></a></li>
                 </ul>
             </nav>
             <a id="menu-icon" href="#" data-action="header#toggleMenu">
