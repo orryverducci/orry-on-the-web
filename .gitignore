@@ -1,6 +1,7 @@
 ### Website ###
 
 # Build output
+.astro/
 dist/
 .output/
 functions/\[\[path\]\].js
