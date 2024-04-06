@@ -8,3 +8,12 @@ updates:
       timezone: Europe/London
     target-branch: development
     open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      time: "23:00"
+      timezone: Europe/London
+    target-branch: development
+    open-pull-requests-limit: 10
