@@ -9,7 +9,7 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/cloudflare": "^11.0.1",
+        "@astrojs/cloudflare": "^11.0.4",
         "@fontsource/montserrat": "^5.0.18",
         "@hotwired/stimulus": "^3.2.2",
         "@hotwired/turbo": "^7.3.0",
