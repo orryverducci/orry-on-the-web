@@ -20,7 +20,7 @@
         "astro-icon": "^1.1.1",
         "bootstrap": "^5.3.3",
         "figlet": "^1.7.0",
-        "sass": "^1.77.8"
+        "sass": "^1.80.5"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.3",
