@@ -2,6 +2,6 @@
 
 This repository hosts [my personal website](https://www.orryverducci.co.uk/).
 
-My site is a built as using [Astro](https://astro.build/).
+My site is built using [Astro](https://astro.build/).
 
 Feel free to take a look at how I built the site.
