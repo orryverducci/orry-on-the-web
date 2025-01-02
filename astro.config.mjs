@@ -7,7 +7,6 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
     site: "https://orryverducci.co.uk",
-    output: "hybrid",
     adapter: cloudflare({
       mode: "directory"
     }),
