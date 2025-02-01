@@ -26,6 +26,6 @@
         "@astrojs/check": "^0.9.4",
         "@cloudflare/workers-types": "^4.20240821.1",
         "typescript": "^5.7.2",
-        "wrangler": "^3.99.0"
+        "wrangler": "^3.107.2"
     }
 }
