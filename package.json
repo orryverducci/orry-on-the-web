@@ -12,7 +12,7 @@
         "@astrojs/cloudflare": "^12.2.1",
         "@fontsource/montserrat": "^5.1.1",
         "@hotwired/stimulus": "^3.2.2",
-        "@hotwired/turbo": "^7.3.0",
+        "@hotwired/turbo": "^8.0.12",
         "@iconify-json/ri": "^1.2.5",
         "@material/animation": "^14.0.0",
         "@types/figlet": "^1.7.0",
