@@ -19,7 +19,7 @@
         "astro": "^5.7.4",
         "astro-icon": "^1.1.5",
         "bootstrap": "^5.3.3",
-        "figlet": "^1.8.0",
+        "figlet": "^1.8.1",
         "sass": "^1.86.1"
     },
     "devDependencies": {
