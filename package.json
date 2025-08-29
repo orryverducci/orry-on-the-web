@@ -16,7 +16,7 @@
         "@iconify-json/ri": "^1.2.5",
         "@material/animation": "^14.0.0",
         "@types/figlet": "^1.7.0",
-        "astro": "^5.12.8",
+        "astro": "^5.13.2",
         "astro-icon": "^1.1.5",
         "bootstrap": "^5.3.7",
         "figlet": "^1.8.2",
