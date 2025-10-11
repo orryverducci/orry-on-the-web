@@ -18,7 +18,7 @@
         "@types/figlet": "^1.7.0",
         "astro": "^5.13.2",
         "astro-icon": "^1.1.5",
-        "bootstrap": "^5.3.7",
+        "bootstrap": "^5.3.8",
         "figlet": "^1.8.2",
         "sass": "^1.89.2"
     },
