@@ -9,14 +9,14 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/cloudflare": "^12.6.13",
+        "@astrojs/cloudflare": "^14.0.0",
         "@fontsource/montserrat": "^5.2.8",
         "@hotwired/stimulus": "^3.2.2",
         "@hotwired/turbo": "^7.3.0",
         "@iconify-json/ri": "^1.2.10",
         "@material/animation": "^14.0.0",
         "@types/figlet": "^1.7.0",
-        "astro": "^5.18.2",
+        "astro": "^7.0.2",
         "astro-icon": "^1.1.5",
         "bootstrap": "^5.3.8",
         "figlet": "^1.8.2",
