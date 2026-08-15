@@ -5,6 +5,7 @@
 dist/
 .output/
 functions/\[\[path\]\].js
+.wrangler/
 
 # Environment variables
 .env
