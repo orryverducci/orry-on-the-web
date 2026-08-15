@@ -18,7 +18,7 @@
         "@types/figlet": "^1.7.0",
         "astro": "^7.2.1",
         "bootstrap": "^5.3.8",
-        "figlet": "^1.8.2",
+        "figlet": "^1.11.4",
         "sass": "^1.102.0"
     },
     "devDependencies": {
