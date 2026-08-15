@@ -5,7 +5,6 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro check && tsc --noEmit && astro build",
-        "preview": "wrangler pages dev ./dist",
         "astro": "astro"
     },
     "dependencies": {
@@ -25,7 +24,6 @@
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
         "@cloudflare/workers-types": "^4.20260607.1",
-        "typescript": "^6.0.3",
-        "wrangler": "^4.106.0"
+        "typescript": "^6.0.3"
     }
 }
