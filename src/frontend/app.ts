@@ -1,6 +1,6 @@
 import * as Turbo from "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
-import * as figlet from "figlet";
+import figlet from "figlet";
 // @ts-ignore
 import standard from "figlet/importable-fonts/Standard.js";
 import HeaderController from "./controllers/header_controller";
