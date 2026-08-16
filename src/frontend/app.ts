@@ -1,4 +1,4 @@
-import * as Turbo from "@hotwired/turbo";
+import "@hotwired/turbo";
 import { Application } from "@hotwired/stimulus";
 import figlet from "figlet";
 // @ts-ignore
@@ -21,7 +21,6 @@ figlet.text("Hello!", { font: "Standard" }, function(err, data) {
     console.info(figletText, "color: #52c41a", messageText);
 });
 
-const turbo = Turbo.start();
 const application:Application = Application.start();
 
 application.register("header", HeaderController);
