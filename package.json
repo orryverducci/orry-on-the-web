@@ -19,7 +19,7 @@
         "astro": "^7.2.9",
         "bootstrap": "^5.3.8",
         "figlet": "^1.8.2",
-        "sass": "^1.102.0"
+        "sass": "^1.103.1"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.10",
