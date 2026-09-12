@@ -12,11 +12,3 @@ body {
 strong {
     font-weight: 600;
 }
-
-.container-fluid {
-    --bs-gutter-x: 1.5rem;
-
-    @include media-breakpoint-down(medium) {
-        --bs-gutter-x: 1rem;
-    }
-}
