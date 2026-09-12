@@ -1,6 +1,6 @@
-@import "reset";
-@import "fonts";
-@import "base";
-@import "header";
-@import "home";
-@import "404";
+@use "reset";
+@use "fonts";
+@use "base";
+@use "header";
+@use "home";
+@use "_notfound";
