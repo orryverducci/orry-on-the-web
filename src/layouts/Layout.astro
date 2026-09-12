@@ -21,7 +21,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Set the header CSS class list
 let headerClassList: Array<string> = new Array();
-headerClassList.push("container-fluid");
 if (headerBackground) {
     headerClassList.push("background");
 }
