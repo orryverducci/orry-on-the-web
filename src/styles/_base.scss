@@ -1,6 +1,11 @@
 @use "breakpoints" as *;
 
+html {
+    background: #7614e6;
+}
+
 body {
+    background: #fff;
     color: #504e4b;
     font-family: "Figtree Variable", Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -27,3 +32,4 @@ strong, h1, h2, h3, h4, h5, h6 {
     color: #2f2d2a;
     font-weight: 600;
 }
+
