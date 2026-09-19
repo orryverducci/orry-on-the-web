@@ -3,17 +3,25 @@
 $breakpoints: ("small": 576, "medium": 768, "large": 992, "xl": 1200, "xxl": 1400);
 
 @mixin media-breakpoint-up($name) {
-    $min: map.get($breakpoints, $name);
+    @if map.has-key($breakpoints, $name) {
+        $min: map.get($breakpoints, $name) * 1px;
 
-    @media (min-width: $min) {
-        @content;
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @warn "Unknown breakpoint: #{$name}.";
     }
 }
 
 @mixin media-breakpoint-down($name) {
-    $max: map.get($breakpoints, $name);
+    @if map.has-key($breakpoints, $name) {
+        $max: map.get($breakpoints, $name) * 1px - 1px;
 
-    @media (max-width: $max) {
-        @content;
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @warn "Unknown breakpoint: #{$name}.";
     }
 }
