@@ -51,12 +51,12 @@
             font-size: 6em;
             line-height: 1em;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(large) {
                 font-size: 4em;
             }
         }
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(large) {
             h1 {
                 font-size: 1.8em;
             }
