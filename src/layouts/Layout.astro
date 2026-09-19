@@ -1,7 +1,6 @@
 ---
 import { Icon } from "@dallay/astro-icon/components";
 import "@fontsource-variable/figtree/wght.css";
-import "../styles/app.scss";
 
 // Set the layout properties
 export interface Props {
@@ -85,5 +84,40 @@ if (date.getMonth() != 12) {
 </html>
 
 <script>
-    import "../frontend/app.ts";
+    import "@hotwired/turbo";
+    import { Application } from "@hotwired/stimulus";
+    import figlet from "figlet";
+    // @ts-ignore
+    import standard from "figlet/importable-fonts/Standard.js";
+    import HeaderController from "../controllers/header_controller.ts";
+    import Error404Controller from "../controllers/error404_controller.ts";
+
+    figlet.parseFont("Standard", standard);
+
+    figlet.text("Hello!", { font: "Standard" }, function(err, data) {
+        if (err) {
+            console.error(err);
+            return;
+        }
+
+        let figletText:string = `%c${data}`;
+        let messageText:string = "\nI see you there, poking around the code ;)";
+        messageText += "\nWant to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web";
+
+        console.info(figletText, "color: #52c41a", messageText);
+    });
+
+    const application:Application = Application.start();
+
+    application.register("header", HeaderController);
+    application.register("error404", Error404Controller);
 </script>
+
+<style lang="scss" is:global>
+    @use "../styles/reset";
+    @use "../styles/fonts";
+    @use "../styles/base";
+    @use "../styles/header";
+    @use "../styles/home";
+    @use "../styles/_notfound";
+</style>

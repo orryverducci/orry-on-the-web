@@ -5,6 +5,7 @@ header {
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.03), 0 1px 1px rgba(0, 0, 0, 0.03);
     display: flex;
     height: 4rem;
+    width: 100%;
 
     @include media-breakpoint-down(medium) {
         height: 3.5rem;
