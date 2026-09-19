@@ -1,14 +1,29 @@
 @use "breakpoints" as *;
 
 body {
+    color: #504e4b;
     font-family: "Figtree Variable", Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 0.005rem;
 
-    @include media-breakpoint-down(medium) {
-        font-size: 16px;
+    @include media-breakpoint-up(small) {
+        font-size: 18px;
+    }
+
+    @include media-breakpoint-up(medium) {
+        font-size: 24px;
+    }
+
+    @include media-breakpoint-up(large) {
+        font-size: 28px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 32px;
     }
 }
 
 strong {
+    color: #2f2d2a;
     font-weight: 600;
 }
