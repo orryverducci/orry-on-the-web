@@ -4,13 +4,12 @@ import "@fontsource-variable/figtree/wght.css";
 
 // Set the layout properties
 export interface Props {
-    controller?: string;
     description?: string;
     navigation?: boolean;
     title?: string;
 }
 
-const { controller, description, navigation = true, title } = Astro.props;
+const { description, navigation = true, title } = Astro.props;
 
 // Set the canonical URL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -61,9 +60,7 @@ if (date.getMonth() != 12) {
             </nav>
             }
         </header>
-        <main role="main" data-controller={controller}>
-            <slot />
-        </main>
+        <slot />
     </body>
 </html>
 
