@@ -1,5 +1,5 @@
 ---
-import { Icon } from "@dallay/astro-icon/components";
+import Header from "./header.astro";
 import "@fontsource-variable/figtree/wght.css";
 
 // Set the layout properties
@@ -9,19 +9,10 @@ export interface Props {
     title?: string;
 }
 
-const { description, navigation = true, title } = Astro.props;
+const { description, navigation, title } = Astro.props;
 
 // Set the canonical URL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-// Set the site logo
-let logo: string;
-let date: Date = new Date();
-if (date.getMonth() != 12) {
-    logo = "/images/logo.svg#logo";
-} else {
-    logo = "/images/logo.svg#xmas-logo"
-}
 ---
 
 <!DOCTYPE html>
@@ -40,26 +31,7 @@ if (date.getMonth() != 12) {
 		<meta name="generator" content={Astro.generator} />
     </head>
     <body>
-        <header role="banner" data-controller="header" data-header-target="menu">
-            <div id="site-logo">
-                <svg role="img" aria-label="Orry on the Web" viewBox="0 0 1505.5 290.16"><use href={logo}/></svg>
-            </div>
-            {navigation &&
-            <a id="menu-icon" href="#" data-action="header#toggleMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="/"><Icon name="ri:home-2-line" aria-hidden="true" />Home</a></li>
-                </ul>
-            </nav>
-            }
-        </header>
+        <Header navigation={navigation} />
         <slot />
     </body>
 </html>

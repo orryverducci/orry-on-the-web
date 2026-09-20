@@ -1,0 +1,40 @@
+---
+import { Icon } from "@dallay/astro-icon/components";
+
+// Set the header properties
+export interface Props {
+    navigation?: boolean;
+}
+
+const { navigation = true } = Astro.props;
+
+// Set the site logo
+let logo: string;
+let date: Date = new Date();
+if (date.getMonth() != 12) {
+    logo = "/images/logo.svg#logo";
+} else {
+    logo = "/images/logo.svg#xmas-logo"
+}
+---
+
+<header role="banner" data-controller="header" data-header-target="menu">
+    <div id="site-logo">
+        <svg role="img" aria-label="Orry on the Web" viewBox="0 0 1505.5 290.16"><use href={logo}/></svg>
+    </div>
+    {navigation &&
+    <a id="menu-icon" href="#" data-action="header#toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="/"><Icon name="ri:home-2-line" aria-hidden="true" />Home</a></li>
+        </ul>
+    </nav>
+    }
+</header>
