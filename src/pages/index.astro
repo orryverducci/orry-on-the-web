@@ -1,12 +1,93 @@
 ---
 import Layout from "../layouts/layout.astro";
-
-export const prerender = false;
 ---
 
 <Layout description="The online home of Orry Verducci." navigation={false}>
 	<main role="main">
-		<h1>Hi, I'm Orry</h1>
-		<p><span>Welcome to my corner</span> <span>of the internet</span></p>
+		<div id="bio">
+			<img src="/images/profile-pic.jpg" alt="Photo of Orry Verducci" class="profile-pic" />
+			<div class="heading">
+				<h1>Hey, I'm Orry</h1>
+				<dotlottie-wc src="/animations/wave.json" autoplay loop speed="0.7"></dotlottie-wc>
+			</div>
+			<p>Welcome to my corner of the web!</p>
+			<p>I'm a Broadcast Engineer working in radio and television, based in <a href="https://en.wikipedia.org/wiki/Cambridgeshire" target="_blank" rel="noopener noreferrer">Cambridgeshire</a> and <a href="https://en.wikipedia.org/wiki/London" target="_blank" rel="noopener noreferrer">London</a> UK.</p>
+		</div>
 	</main>
 </Layout>
+
+<script>
+	import "@lottiefiles/dotlottie-wc";
+</script>
+
+<style lang="scss" is:global>
+	@use "../styles/breakpoints" as *;
+
+    main {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		text-align: center;
+
+		@include media-breakpoint-up(xl) {
+			text-align: left;
+			flex-direction: row;
+		}
+	}
+
+	#bio {
+		align-items: center;
+		background: linear-gradient(135deg in oklch, #7614e6, #b517ec);
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 7.5rem 2rem 4rem 2rem;
+
+		a {
+			color: inherit;
+			text-decoration: underline 0.05em rgba(255, 255, 255, 0);
+
+			&:hover {
+				text-decoration-color: rgba(255, 255, 255, 1);
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			align-items: flex-start;
+			flex: 0 0 50dvw;
+			justify-content: center;
+			padding: 4.5rem 2rem 1rem 20dvh;
+		}
+	}
+
+	.profile-pic {
+		border: 0.2rem solid #fff;
+		border-radius: 50%;
+		height: 15rem;
+		width: 15rem;
+
+		@include media-breakpoint-up(large) {
+			height: 10rem;
+			width: 10rem;
+		}
+	}
+
+	.heading {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	h1 {
+		color: inherit;
+		font-size: 2rem;
+	}
+
+	dotlottie-wc {
+		display: inline-block;
+		height: 2rem;
+		width: 2rem;
+	}
+</style>
