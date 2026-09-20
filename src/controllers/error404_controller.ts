@@ -65,7 +65,7 @@ export default class extends Controller {
     
     resize(): void {
         let aspectRatio = window.innerWidth / window.innerHeight;
-        this.backgroundTarget.height = 256;
-        this.backgroundTarget.width = Math.round(256 * aspectRatio);
+        this.backgroundTarget.height = 576;
+        this.backgroundTarget.width = Math.round(576 * aspectRatio);
     }
 }
