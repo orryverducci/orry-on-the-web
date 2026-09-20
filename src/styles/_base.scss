@@ -15,10 +15,6 @@ html {
     @include media-breakpoint-up(large) {
         font-size: 28px;
     }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 32px;
-    }
 }
 
 body {
