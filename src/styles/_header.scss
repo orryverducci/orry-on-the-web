@@ -5,11 +5,15 @@ header {
     color: #fff;
     display: flex;
     flex-flow: row wrap;
-    height: 3.5rem;
+    height: 3rem;
     padding: 0 1rem;
     position: absolute;
     width: 100%;
     z-index: 2;
+
+    @include media-breakpoint-up(xl) {
+        height: 2.5rem;
+    }
 }
 
 #site-logo {
@@ -17,8 +21,12 @@ header {
     padding: 0 0.5rem;
 
     svg {
-        height: 2.5rem;
+        height: 2rem;
         margin: 0.7rem 0 0.3rem 0;
+
+        @include media-breakpoint-up(xl) {
+            height: 1.5rem;
+        }
     }
 }
 
