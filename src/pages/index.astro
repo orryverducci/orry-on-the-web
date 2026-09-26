@@ -22,6 +22,7 @@ import Layout from "../layouts/layout.astro";
 
 <style lang="scss">
 	@use "../styles/breakpoints" as *;
+	@use "../styles/shadow" as *;
 
     main {
 		display: flex;
@@ -66,6 +67,8 @@ import Layout from "../layouts/layout.astro";
 		border-radius: 50%;
 		height: 15rem;
 		width: 15rem;
+
+		@include shadow(medium, #b517ec);
 
 		@include media-breakpoint-up(large) {
 			height: 10rem;

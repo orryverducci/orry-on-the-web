@@ -1,0 +1,28 @@
+@use "sass:color";
+
+@mixin shadow($depth, $colour: #fff) {
+    $shadow-colour: color.adjust($colour, $lightness: -37%);
+
+    @if $depth == low {
+        box-shadow: 0.3px 0.5px 0.7px color.change($shadow-colour, $alpha: 0.36),
+            0.5px 0.9px 1.2px -1px color.change($shadow-colour, $alpha: 0.42),
+            1.2px 2.3px 3.1px -2px color.change($shadow-colour, $alpha: 0.48);
+    } @else if $depth == medium {
+        box-shadow: 0.3px 0.5px 0.5px color.change($shadow-colour, $alpha: 0.75),
+            0.5px 1.1px 1px -1.5px color.change($shadow-colour, $alpha: 0.58),
+            1.9px 3.7px 3.4px -3px color.change($shadow-colour, $alpha: 0.42),
+            5.4px 10.8px 10px -4.5px color.change($shadow-colour, $alpha: 0.25);
+    } @else if $depth == high {
+        box-shadow: 0.3px 0.5px 0.5px color.change($shadow-colour, $alpha: 0.54),
+            0.5px 1px 0.9px -0.6px color.change($shadow-colour, $alpha: 0.48),
+            1px 2px 1.8px -1.1px color.change($shadow-colour, $alpha: 0.43),
+            2px 4px 3.7px -1.7px color.change($shadow-colour, $alpha: 0.38),
+            3.8px 7.6px 7px -2.2px color.change($shadow-colour, $alpha: 0.32),
+            6.7px 13.5px 12.4px -2.8px color.change($shadow-colour, $alpha: 0.27),
+            11px 22.1px 20.4px -3.4px color.change($shadow-colour, $alpha: 0.22),
+            17px 34.1px 31.4px -3.9px color.change($shadow-colour, $alpha: 0.17),
+            25px 50px 46.1px -4.5px color.change($shadow-colour, $alpha: 0.11);
+    } @else {
+        @warn "Unknown shadow depth: #{$depth}.";
+    }
+}
