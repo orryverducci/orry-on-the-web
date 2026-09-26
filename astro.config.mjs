@@ -15,6 +15,9 @@ export default defineConfig({
         entrypoint: 'astro/assets/services/noop'
       }
     },
+    build: {
+      inlineStylesheets: 'never'
+    },
     vite: {
         build: {
           sourcemap: true,
