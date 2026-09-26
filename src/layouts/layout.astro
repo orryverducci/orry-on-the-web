@@ -1,6 +1,6 @@
 ---
 import Header from "./header.astro";
-import "@fontsource-variable/figtree/wght.css";
+import { Font } from "astro:assets";
 
 // Set the layout properties
 export interface Props {
@@ -29,6 +29,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
         {import.meta.env.PROD && <script src="https://static.cloudflareinsights.com/beacon.min.js" defer data-cf-beacon='{"token": "2be49cce999f4eeca191d570eb429b5c"}'></script>}
 		<meta name="generator" content={Astro.generator} />
+        <Font cssVariable="--font-figtree" preload />
+        <Font cssVariable="--font-vcrosd" />
+        <Font cssVariable="--font-modeseven" />
     </head>
     <body>
         <Header navigation={navigation} />
