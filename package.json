@@ -5,6 +5,7 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro check && tsc --noEmit && astro build",
+        "preview": "astro preview",
         "astro": "astro"
     },
     "dependencies": {
