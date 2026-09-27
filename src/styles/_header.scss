@@ -11,21 +11,22 @@ header {
     width: 100%;
     z-index: 2;
 
-    @include media-breakpoint-up(xl) {
-        height: 2.5rem;
+    @include media-breakpoint-up(large) {
+        height: 3.5rem;
+        padding: 0 2rem;
     }
 }
 
 #site-logo {
     flex: 1 0 auto;
-    padding: 0 0.5rem;
 
     svg {
         height: 2rem;
         margin: 0.7rem 0 0.3rem 0;
 
-        @include media-breakpoint-up(xl) {
-            height: 1.5rem;
+        @include media-breakpoint-up(large) {
+            height: 2.1rem;
+            margin: 0.9rem 0 0.5rem 0;
         }
     }
 }
