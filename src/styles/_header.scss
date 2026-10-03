@@ -11,7 +11,7 @@ header {
     width: 100%;
     z-index: 2;
 
-    @include media-breakpoint-up(large) {
+    @include media-breakpoint-up(medium) {
         height: 3.5rem;
         padding: 0 2rem;
     }
@@ -24,7 +24,7 @@ header {
         height: 2rem;
         margin: 0.7rem 0 0.3rem 0;
 
-        @include media-breakpoint-up(large) {
+        @include media-breakpoint-up(medium) {
             height: 2.1rem;
             margin: 0.9rem 0 0.5rem 0;
         }
