@@ -72,5 +72,52 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <style lang="scss" is:global>
     @use "../styles/reset";
-    @use "../styles/base";
+    @use "../styles/breakpoints" as *;
+
+    html {
+        background: #7614e6;
+        font-size: 16px;
+
+        @include media-breakpoint-up(medium) {
+            font-size: 18px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 20px;
+        }
+    }
+
+    body {
+        background: #fff;
+        color: #504e4b;
+        font-family: var(--font-figtree);
+        letter-spacing: 0.005rem;
+    }
+
+    strong, h1, h2, h3, h4, h5, h6 {
+        color: #2f2d2a;
+        font-weight: 600;
+    }
+
+    main {
+        min-height: 100svh;
+        padding-top: 3rem;
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 2.5rem;
+        }
+    }
+
+    a {
+        color: #7614e6;
+        text-decoration: underline 0.05em rgba(118, 20, 230, 0);
+        text-underline-offset: 0.15em;
+        transition: text-decoration-color 300ms;
+
+        &:hover {
+            text-decoration-color: rgba(118, 20, 230, 1);
+        }
+    }
 </style>
