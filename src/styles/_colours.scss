@@ -1,0 +1,46 @@
+@use "sass:color";
+@use "sass:map";
+
+$palette: (
+    purple: (
+        900: #580BB1,
+        800: #610CC3,
+        700: #6B0DD7,
+        600: #760EED,
+        500: #8E0EF0,
+        400: #A30FF2,
+        300: #BA11F2,
+        200: #CD11F2,
+        100: #E611F5
+    ),
+    orange: (
+        900: #B1160B,
+        800: #C3180C,
+        700: #D71A0D,
+        600: #EC1D0E,
+        500: #F0350F,
+        400: #F1470E,
+        300: #F26112,
+        200: #F37311,
+        100: #F48A10
+    ),
+    grey: (
+        900: #212529,
+        800: #343A40,
+        700: #495057,
+        600: #6C757D,
+        500: #ADB5BD,
+        400: #CED4DA,
+        300: #DEE2E6,
+        200: #E9ECEF,
+        100: #F8F9FA
+    )
+);
+
+@function colour($colour, $shade, $alpha: 1) {
+    @if $alpha == 1 {
+        @return map.get($palette, $colour, $shade);
+    } @else {
+        @return color.change(map.get($palette, $colour, $shade), $alpha: $alpha);
+    }
+}

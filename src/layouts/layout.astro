@@ -73,9 +73,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <style lang="scss" is:global>
     @use "../styles/reset";
     @use "../styles/breakpoints" as *;
+    @use "../styles/colours" as *;
 
     html {
-        background: #580BB1;
+        background: colour(purple, 900);
         font-size: 16px;
 
         @include media-breakpoint-up(medium) {
@@ -89,13 +90,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     body {
         background: #fff;
-        color: #504e4b;
+        color: colour(grey, 700);
         font-family: var(--font-figtree);
         letter-spacing: 0.005rem;
     }
 
     strong, h1, h2, h3, h4, h5, h6 {
-        color: #2f2d2a;
+        color: colour(grey, 900);
         font-weight: 600;
     }
 
@@ -111,13 +112,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
 
     a {
-        color: #7614e6;
-        text-decoration: underline 0.05em rgba(118, 20, 230, 0);
+        color: colour(purple, 500);
+        text-decoration: underline 0.05em colour(purple, 500, 0);
         text-underline-offset: 0.15em;
         transition: text-decoration-color 300ms;
 
         &:hover {
-            text-decoration-color: rgba(118, 20, 230, 1);
+            text-decoration-color: colour(purple, 500);
         }
     }
 </style>

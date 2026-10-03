@@ -18,6 +18,7 @@ import Layout from "../layouts/layout.astro";
 
 <style lang="scss">
 	@use "../styles/breakpoints" as *;
+	@use "../styles/colours" as *;
 	@use "../styles/shadow" as *;
 
     main {
@@ -42,7 +43,7 @@ import Layout from "../layouts/layout.astro";
 
 	#bio {
 		align-items: center;
-		background: linear-gradient(135deg in oklch, #610CC3, #E611F5);
+		background: linear-gradient(135deg in oklch, colour(purple, 800), colour(purple, 100));
 		color: #fff;
 		display: flex;
 		flex-direction: column;
@@ -72,7 +73,7 @@ import Layout from "../layouts/layout.astro";
 		height: 15rem;
 		width: 15rem;
 
-		@include shadow(medium, #A30FF2);
+		@include shadow(medium, colour(purple, 500));
 
 		@include media-breakpoint-up(large) {
 			height: 14rem;
