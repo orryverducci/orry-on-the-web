@@ -38,3 +38,97 @@ if (date.getMonth() != 12) {
     </nav>
     }
 </header>
+
+<style lang="scss" is:global>
+    @use "../styles/breakpoints" as *;
+    @use "@material/animation";
+
+    header {
+        color: #fff;
+        display: flex;
+        flex-flow: row wrap;
+        height: 3rem;
+        padding: 0 1rem;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        @include media-breakpoint-up(medium) {
+            height: 3.5rem;
+            padding: 0 2rem;
+        }
+    }
+
+    #site-logo {
+        flex: 1 0 auto;
+
+        svg {
+            height: 2rem;
+            margin: 0.7rem 0 0.3rem 0;
+
+            @include media-breakpoint-up(medium) {
+                height: 2.1rem;
+                margin: 0.9rem 0 0.5rem 0;
+            }
+        }
+    }
+
+    #menu-icon {
+        display: none;
+        flex: 0 0 3rem;
+        color: inherit;
+        position: relative;
+
+        span {
+            background-color: currentColor;
+            height: 0.2rem;
+            left: 0.5rem;
+            position: absolute;
+            top: 1.05rem;
+            transition: 0.4s;
+            width: 1rem;
+
+            &:nth-child(2n) {
+                left: 1.5rem;
+            }
+
+            &:nth-child(n+3) {
+                top: 0.6rem + 1.05rem;
+            }
+
+            &:nth-child(n+5) {
+                top: 1.2rem + 1.05rem;
+            }
+        }
+    }
+
+    nav {
+        display: none;
+        flex: 1 0 100%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: inherit;
+                    display: block;
+                    font-weight: 600;
+                    line-height: 4rem;
+                    padding: 0 1rem;
+                    text-decoration: none;
+                    transition: opacity 0.25s;
+
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+</style>    
