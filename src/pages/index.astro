@@ -65,6 +65,11 @@ import Layout from "../layouts/layout.astro";
 			justify-content: center;
 			padding: 3rem 2rem 1rem 10dvw;
 		}
+
+		@media (prefers-color-scheme: dark) {
+			background: linear-gradient(135deg in oklch, dark-colour(purple, 800), dark-colour(purple, 100));
+            color: colour(grey, 200);
+        }
 	}
 
 	.profile-pic {
@@ -79,6 +84,12 @@ import Layout from "../layouts/layout.astro";
 			height: 14rem;
 			width: 14rem;
 		}
+
+		@media (prefers-color-scheme: dark) {
+            border-color: colour(grey, 200);
+
+			@include shadow(medium, dark-colour(purple, 500));
+        }
 	}
 
 	.heading {

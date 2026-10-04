@@ -44,3 +44,13 @@ $palette: (
         @return color.change(map.get($palette, $colour, $shade), $alpha: $alpha);
     }
 }
+
+@function dark-colour($colour, $shade, $alpha: 1) {
+    $darkened-colour: color.scale(map.get($palette, $colour, $shade), $lightness: -30%);
+
+    @if $alpha == 1 {
+        @return $darkened-colour;
+    } @else {
+        @return color.change($darkened-colour, $alpha: $alpha);
+    }
+}

@@ -23,6 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         {typeof title !== "undefined" ? <title>{title} - Orry on the Web</title> : <title>Orry on the Web</title>}
         {typeof description !== "undefined" && <meta name="description" content={description}>}
         <meta name="theme-color" content="#7614e6">
+        <meta name="color-scheme" content="light dark" />
         <meta name="google-site-verification" content="nLUL7swGgc-k1Io-r5lZYk_i8aXedERKq6Mb6PEYUbY">
         <meta name="msvalidate.01" content="8BD1560DF5967630C8CEE1C55F8A75A9">
         <link href={canonicalURL} rel="canonical">
@@ -93,11 +94,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         color: colour(grey, 700);
         font-family: var(--font-figtree);
         letter-spacing: 0.005rem;
+
+        @media (prefers-color-scheme: dark) {
+            background: colour(grey, 900);
+            color: colour(grey, 200);
+        }
     }
 
     strong, h1, h2, h3, h4, h5, h6 {
         color: colour(grey, 900);
         font-weight: 600;
+
+        @media (prefers-color-scheme: dark) {
+            color: colour(grey, 100);
+        }
     }
 
     main {
@@ -117,8 +127,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         text-underline-offset: 0.15em;
         transition: text-decoration-color 300ms;
 
+        @media (prefers-color-scheme: dark) {
+            color: colour(purple, 200);
+            text-decoration-color: colour(purple, 200, 0);
+        }
+
         &:hover {
             text-decoration-color: colour(purple, 500);
+
+            @media (prefers-color-scheme: dark) {
+                text-decoration-color: colour(purple, 200);
+            }
         }
     }
 </style>
