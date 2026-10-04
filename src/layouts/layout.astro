@@ -1,6 +1,9 @@
 ---
 import Header from "./header.astro";
 import { Font } from "astro:assets";
+import figlet from "figlet";
+// @ts-ignore
+import standard from "figlet/importable-fonts/Standard.js";
 
 // Set the layout properties
 export interface Props {
@@ -13,6 +16,10 @@ const { description, navigation, title } = Astro.props;
 
 // Set the canonical URL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Generate figlet for the user console
+figlet.parseFont("Standard", standard);
+const figletText:string = await figlet.text("Hello!", { font: "Standard" });
 ---
 
 <!DOCTYPE html>
@@ -34,7 +41,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <Font cssVariable="--font-vcrosd" />
         <Font cssVariable="--font-modeseven" />
     </head>
-    <body>
+    <body data-figlet={figletText}>
         <Header navigation={navigation} />
         <slot />
     </body>
@@ -44,26 +51,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     import "@hotwired/turbo";
     import { Application } from "@hotwired/stimulus";
     import "@lottiefiles/dotlottie-wc";
-    import figlet from "figlet";
-    // @ts-ignore
-    import standard from "figlet/importable-fonts/Standard.js";
     import HeaderController from "../controllers/header_controller.ts";
     import Error404Controller from "../controllers/error404_controller.ts";
 
-    figlet.parseFont("Standard", standard);
-
-    figlet.text("Hello!", { font: "Standard" }, function(err, data) {
-        if (err) {
-            console.error(err);
-            return;
-        }
-
-        let figletText:string = `%c${data}`;
+    if (document.querySelector("body")?.dataset.figlet) {
         let messageText:string = "\nI see you there, poking around the code ;)";
         messageText += "\nWant to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web";
-
-        console.info(figletText, "color: #52c41a", messageText);
-    });
+        console.info("%c" + document.querySelector("body").dataset.figlet, "color: #8E0EF0", messageText);
+    }
 
     const application:Application = Application.start();
 
