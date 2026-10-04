@@ -55,7 +55,7 @@ const figletText:string = await figlet.text("Hello!", { font: "Standard" });
     if (document.querySelector("body")?.dataset.figlet) {
         let messageText:string = "\nI see you there, poking around the code ;)";
         messageText += "\nWant to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web";
-        console.info("%c" + document.querySelector("body").dataset.figlet, "color: #8E0EF0", messageText);
+        console.info("%c" + document.querySelector("body")!.dataset.figlet, "color: #8E0EF0", messageText);
     }
 
     const application:Application = Application.start();
