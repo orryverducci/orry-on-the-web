@@ -1,9 +1,6 @@
 ---
 import Header from "./header.astro";
 import { Font } from "astro:assets";
-import figlet from "figlet";
-// @ts-ignore
-import standard from "figlet/importable-fonts/Standard.js";
 
 // Set the layout properties
 export interface Props {
@@ -16,10 +13,6 @@ const { description, navigation, title } = Astro.props;
 
 // Set the canonical URL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-// Generate figlet for the user console
-figlet.parseFont("Standard", standard);
-const figletText:string = await figlet.text("Hello!", { font: "Standard" });
 ---
 
 <!DOCTYPE html>
@@ -39,7 +32,7 @@ const figletText:string = await figlet.text("Hello!", { font: "Standard" });
         <Font cssVariable="--font-vcrosd" />
         <Font cssVariable="--font-modeseven" />
     </head>
-    <body data-figlet={figletText}>
+    <body>
         <Header navigation={navigation} />
         <slot />
     </body>
@@ -52,11 +45,15 @@ const figletText:string = await figlet.text("Hello!", { font: "Standard" });
     import HeaderController from "../controllers/header_controller.ts";
     import Error404Controller from "../controllers/error404_controller.ts";
 
-    if (document.querySelector("body")?.dataset.figlet) {
-        let messageText:string = "\nI see you there, poking around the code ;)";
-        messageText += "\nWant to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web";
-        console.info("%c" + document.querySelector("body")!.dataset.figlet, "color: #8E0EF0", messageText);
-    }
+    let helloFiglet:string = String.raw`%c  _   _      _ _       _
+ | | | | ___| | | ___ | |
+ | |_| |/ _ \ | |/ _ \| |
+ |  _  |  __/ | | (_) |_|
+ |_| |_|\___|_|_|\___/(_)`;
+    
+    let messageText:string = `\n\nI see you there, poking around the code ;)
+Want to see the source code for this site? Head over to https://github.com/orryverducci/orry-on-the-web`;
+    console.info(helloFiglet, "color: #8E0EF0", messageText);
 
     const application:Application = Application.start();
 
