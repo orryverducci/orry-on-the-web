@@ -10,7 +10,7 @@ $breakpoints: ("small": 576, "medium": 768, "large": 1024, "xl": 1400);
             @content;
         }
     } @else {
-        @warn "Unknown breakpoint: #{$name}.";
+        @error "Unknown breakpoint: #{$name}.";
     }
 }
 
@@ -22,6 +22,6 @@ $breakpoints: ("small": 576, "medium": 768, "large": 1024, "xl": 1400);
             @content;
         }
     } @else {
-        @warn "Unknown breakpoint: #{$name}.";
+        @error "Unknown breakpoint: #{$name}.";
     }
 }
