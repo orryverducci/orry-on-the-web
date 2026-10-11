@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "sass:map";
 
 $breakpoints: ("small": 576, "medium": 768, "large": 1024, "xl": 1400);
@@ -8,6 +9,26 @@ $breakpoints: ("small": 576, "medium": 768, "large": 1024, "xl": 1400);
 
         @media (min-width: $min) {
             @content;
+        }
+    } @else {
+        @error "Unknown breakpoint: #{$name}.";
+    }
+}
+
+@mixin media-breakpoint-only($name) {
+    @if map.has-key($breakpoints, $name) {
+        $i: list.index(map.keys($breakpoints), $name);
+
+        $max: map.get($breakpoints, $name) * 1px - 1px;
+
+        @if $i > 0 {
+            $min: list.nth(map.values($breakpoints), $i - 1) * 1px;
+
+            @media (min-width: $min) and (max-width: $max) {
+                @content;
+            }
+        } @else {
+            @error "Breakpoint #{$name} is the smallest defined breakpoint.";
         }
     } @else {
         @error "Unknown breakpoint: #{$name}.";
