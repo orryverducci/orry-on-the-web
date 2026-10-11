@@ -26,6 +26,7 @@ import Layout from "../layouts/layout.astro";
 		flex-direction: column;
         gap: 1rem;
         justify-content: space-evenly;
+        overflow: hidden;
 		padding: 3rem 2rem 1rem 2rem;
         text-align: center;
 
@@ -46,7 +47,7 @@ import Layout from "../layouts/layout.astro";
             animation: scanlines 0.1s infinite linear;
             background: linear-gradient(rgba(255,255,255,0) 50%, rgba(0,0,0,0.06) 50%);
             background-size: 100% 4px;
-            bottom: -4px;
+            bottom: 0;
             content: "";
             display: block;
             left: 0;
@@ -64,7 +65,7 @@ import Layout from "../layouts/layout.astro";
 
     @keyframes scanlines {
         0%   { transform: translateY(0); }
-        100% { transform: translateY(5px); }
+        100% { transform: translateY(4px); }
     }
 
     #noise {
