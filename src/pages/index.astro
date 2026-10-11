@@ -6,12 +6,14 @@ import Layout from "../layouts/layout.astro";
 	<main>
 		<div id="bio">
 			<img src="/images/profile-pic.jpg" alt="Headshot of Orry Verducci" class="profile-pic" decoding="async" />
-			<div class="heading">
-				<h1>Hey, I'm Orry</h1>
-				<dotlottie-wc src="/animations/wave.json" autoplay loop speed="0.7"></dotlottie-wc>
+			<div class="text-block">
+				<div class="heading">
+					<h1>Hey, I'm Orry</h1>
+					<dotlottie-wc src="/animations/wave.json" autoplay loop speed="0.7"></dotlottie-wc>
+				</div>
+				<p>Welcome to my corner of the web!</p>
+				<p>I'm a Broadcast Engineer working in radio and television, based in <a href="https://en.wikipedia.org/wiki/Cambridgeshire" target="_blank" rel="noopener noreferrer">Cambridgeshire</a> and <a href="https://en.wikipedia.org/wiki/London" target="_blank" rel="noopener noreferrer">London</a> UK.</p>
 			</div>
-			<p>Welcome to my corner of the web!</p>
-			<p>I'm a Broadcast Engineer working in radio and television, based in <a href="https://en.wikipedia.org/wiki/Cambridgeshire" target="_blank" rel="noopener noreferrer">Cambridgeshire</a> and <a href="https://en.wikipedia.org/wiki/London" target="_blank" rel="noopener noreferrer">London</a> UK.</p>
 		</div>
 	</main>
 </Layout>
@@ -44,7 +46,7 @@ import Layout from "../layouts/layout.astro";
 		color: #fff;
 		display: flex;
 		flex-direction: column;
-		gap: 1.4rem;
+		gap: 1.4em;
 		padding: 5rem 2rem 4rem 2rem;
 
 		a {
@@ -54,6 +56,12 @@ import Layout from "../layouts/layout.astro";
 			&:hover {
 				text-decoration-color: rgba(255, 255, 255, 1);
 			}
+		}
+
+		@include media-breakpoint-only(medium) {
+			flex-direction: row;
+			gap: 2em;
+			text-align: left;
 		}
 
 		@include media-breakpoint-up(large) {
@@ -89,11 +97,25 @@ import Layout from "../layouts/layout.astro";
         }
 	}
 
+	.text-block {
+		display: flex;
+		flex-direction: column;
+		gap: 1.4em;
+	}
+
 	.heading {
 		align-items: center;
 		display: flex;
 		justify-content: center;
 		gap: 0.5rem;
+
+		@include media-breakpoint-only(medium) {
+			justify-content: flex-start;
+		}
+
+		@include media-breakpoint-up(large) {
+			justify-content: flex-start;
+		}
 	}
 
 	h1 {
