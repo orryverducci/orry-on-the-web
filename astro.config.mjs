@@ -13,6 +13,7 @@ export default defineConfig({
     cache: {
       provider: cacheCloudflare(),
     },
+    output: 'server',
     integrations: [icon()],
     fonts: [
       {
