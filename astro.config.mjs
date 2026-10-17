@@ -1,6 +1,7 @@
 import { defineConfig, fontProviders } from "astro/config";
 
 import cloudflare from "@astrojs/cloudflare";
+import { cacheCloudflare } from '@astrojs/cloudflare/cache';
 import icon from "@dallay/astro-icon";
 
 // https://astro.build/config
@@ -9,6 +10,9 @@ export default defineConfig({
     adapter: cloudflare({
       mode: "directory"
     }),
+    cache: {
+      provider: cacheCloudflare(),
+    },
     integrations: [icon()],
     fonts: [
       {
