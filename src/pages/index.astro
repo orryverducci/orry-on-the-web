@@ -80,15 +80,10 @@ import Layout from "../layouts/layout.astro";
 	.profile-pic {
 		border: 0.3rem solid #fff;
 		border-radius: 50%;
-		height: 15rem;
-		width: 15rem;
+		height: 14rem;
+		width: 14rem;
 
 		@include shadow(medium, colour(purple, 500));
-
-		@include media-breakpoint-up(large) {
-			height: 14rem;
-			width: 14rem;
-		}
 
 		@media (prefers-color-scheme: dark) {
             border-color: colour(grey, 200);
