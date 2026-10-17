@@ -2,6 +2,7 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import cloudflare from "@astrojs/cloudflare";
 import { cacheCloudflare } from '@astrojs/cloudflare/cache';
+import sitemap from "@astrojs/sitemap";
 import icon from "@dallay/astro-icon";
 
 // https://astro.build/config
@@ -14,7 +15,7 @@ export default defineConfig({
       provider: cacheCloudflare(),
     },
     output: 'server',
-    integrations: [icon()],
+    integrations: [icon(), sitemap()],
     fonts: [
       {
         provider: fontProviders.fontsource(),
