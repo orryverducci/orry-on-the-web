@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/layout.astro";
+import { Icon } from "@dallay/astro-icon/components";
 ---
 
 <Layout description="The online home of Orry Verducci." navigation={false}>
@@ -15,6 +16,17 @@ import Layout from "../layouts/layout.astro";
 				<p>I'm a Broadcast Engineer working in radio and television, based in <a href="https://en.wikipedia.org/wiki/Cambridgeshire" target="_blank" rel="noopener noreferrer">Cambridgeshire</a> and <a href="https://en.wikipedia.org/wiki/London" target="_blank" rel="noopener noreferrer">London</a> UK.</p>
 			</div>
 		</div>
+		<div id="content">
+			<div id="social-links">
+				<p>Find me on:</p>
+				<ul>
+					<li><a href="https://www.instagram.com/orry.verducci/" title="Instagram" target="_blank" rel="noopener noreferrer"><Icon name="ri:instagram-line" role="img" aria-label="Instagram" /></a></li>
+                    <li><a href="https://www.threads.com/@orry.verducci" title="Threads" target="_blank" rel="noopener noreferrer"><Icon name="ri:threads-line" role="img" aria-label="Threads" /></a></li>
+                    <li><a href="https://github.com/orryverducci/" title="GitHub" target="_blank" rel="noopener noreferrer"><Icon name="ri:github-fill" role="img" aria-label="GitHub" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/orryv/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><Icon name="ri:linkedin-box-fill" role="img" aria-label="LinkedIn" /></a></li>
+				</ul>
+			</div>
+		</div>
 	</main>
 </Layout>
 
@@ -22,6 +34,7 @@ import Layout from "../layouts/layout.astro";
 	@use "../styles/breakpoints" as *;
 	@use "../styles/colours" as *;
 	@use "../styles/shadow" as *;
+	@use "@material/animation";
 
     main {
 		display: flex;
@@ -123,5 +136,54 @@ import Layout from "../layouts/layout.astro";
 		display: inline-block;
 		height: 2em;
 		width: 2em;
+	}
+
+	#content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 3rem 2rem;
+
+		@include media-breakpoint-up(large) {
+			flex: 0 0 50dvw;
+			padding: 4rem 3rem;
+		}
+	}
+
+	#social-links {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			a {
+				color: inherit;
+				display: inline-block;
+				transform: scale(1);
+				transition: color 0.2s linear, transform 0.2s animation.$standard-curve-timing-function;
+				vertical-align: middle;
+
+				&:hover {
+					color: colour(purple, 500);
+					transform: scale(1.2);
+
+					@media (prefers-color-scheme: dark) {
+						color: colour(purple, 200);
+					}
+				}
+			}
+		}
+
+		@include media-breakpoint-up(large) {
+			justify-content: flex-start;
+		}
 	}
 </style>
