@@ -15,6 +15,7 @@ export default defineConfig({
       provider: cacheCloudflare(),
     },
     output: 'server',
+    session: false,
     integrations: [icon(), sitemap()],
     fonts: [
       {
