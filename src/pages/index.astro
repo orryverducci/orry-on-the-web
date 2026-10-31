@@ -162,21 +162,21 @@ import { Icon } from "@dallay/astro-icon/components";
 			gap: 1rem;
 			list-style-type: none;
 			padding: 0;
+		}
 
-			a {
-				color: inherit;
-				display: inline-block;
-				transform: scale(1);
-				transition: color 0.2s linear, transform 0.2s animation.$standard-curve-timing-function;
-				vertical-align: middle;
+		a {
+			color: inherit;
+			display: inline-block;
+			transform: scale(1);
+			transition: color 0.2s linear, transform 0.2s animation.$standard-curve-timing-function;
+			vertical-align: middle;
 
-				&:hover {
-					color: colour(purple, 500);
-					transform: scale(1.2);
+			&:hover {
+				color: colour(purple, 500);
+				transform: scale(1.2);
 
-					@media (prefers-color-scheme: dark) {
-						color: colour(purple, 200);
-					}
+				@media (prefers-color-scheme: dark) {
+					color: colour(purple, 200);
 				}
 			}
 		}
