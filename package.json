@@ -17,7 +17,7 @@
         "@iconify-json/bxl": "^1.2.4",
         "@lottiefiles/dotlottie-wc": "^0.9.28",
         "@material/animation": "^14.0.0",
-        "astro": "^7.3.5",
+        "astro": "^7.4.4",
         "bootstrap": "^5.3.8",
         "sass": "^1.105.0"
     },
