@@ -17,6 +17,48 @@ import { Icon } from "@dallay/astro-icon/components";
 			</div>
 		</div>
 		<div id="content">
+			<ul id="navigation">
+				<li>
+					<a class="about" href="#">
+						<Icon name="andrsrxn:face-smile" role="img" aria-label="Instagram" />
+						<div>
+							<strong>About Me</strong>
+							Find out more about me and what I do.
+						</div>
+						<div class="coming-soon">Coming Soon</div>
+					</a>
+				</li>
+				<li>
+					<a class="apps" href="#">
+						<Icon name="andrsrxn:browser-cursor-click" role="img" aria-label="Instagram" />
+						<div>
+							<strong>Apps</strong>
+							Discover the apps I've made.
+						</div>
+						<div class="coming-soon">Coming Soon</div>
+					</a>
+				</li>
+				<li>
+					<a class="photos" href="#">
+						<Icon name="andrsrxn:image" role="img" aria-label="Instagram" />
+						<div>
+							<strong>Photos</strong>
+							Come see the world through my lens.
+						</div>
+						<div class="coming-soon">Coming Soon</div>
+					</a>
+				</li>
+				<li>
+					<a class="contact" href="#">
+						<Icon name="andrsrxn:mail" role="img" aria-label="Instagram" />
+						<div>
+							<strong>Contact Me</strong>
+							Get in touch with me.
+						</div>
+						<div class="coming-soon">Coming Soon</div>
+					</a>
+				</li>
+			</ul>
 			<div id="social-links">
 				<p>Find me on:</p>
 				<ul>
@@ -142,6 +184,7 @@ import { Icon } from "@dallay/astro-icon/components";
 
 	#content {
 		display: flex;
+		gap: 2rem;
 		flex-direction: column;
 		justify-content: center;
 		padding: 3rem 2rem;
@@ -149,6 +192,84 @@ import { Icon } from "@dallay/astro-icon/components";
 		@include media-breakpoint-up(large) {
 			flex: 0 0 50dvw;
 			padding: 4rem 3rem;
+		}
+	}
+
+	#navigation {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		list-style-type: none;
+		padding: 0;
+		text-align: left;
+
+		a {
+			align-items: center;
+			color: inherit;
+			display: flex;
+			flex-direction: row;
+			gap: 1.5rem;
+			text-decoration: none;
+		}
+
+		svg {
+			height: 2rem;
+			transition: color 0.2s linear;
+			width: 2rem;
+		}
+
+		div {
+			flex: 1 1 auto;
+
+			&.coming-soon {
+				color: #fff;
+				background-color: colour(cherry, 600);
+				border-radius: 0.3rem;
+				flex: 0 0 6rem;
+				line-height: 1.4rem;
+				padding: 0.2rem 0.5rem;
+				text-align: center;
+
+				@media (prefers-color-scheme: dark) {
+					background-color: colour(cherry, 700);
+				}
+			}
+		}
+
+		strong {
+			display: block;
+		}
+	}
+
+	.about:hover svg {
+		color: colour(orange, 200);
+
+		@media (prefers-color-scheme: dark) {
+			color: colour(orange, 100);
+		}
+	}
+
+	.apps:hover svg {
+		color: colour(green, 200);
+
+		@media (prefers-color-scheme: dark) {
+			color: colour(green, 100);
+		}
+	}
+
+	.photos:hover svg {
+		color: colour(blue, 200);
+
+		@media (prefers-color-scheme: dark) {
+			color: colour(blue, 100);
+		}
+	}
+
+	.contact:hover svg {
+		color: colour(cherry, 200);
+
+		@media (prefers-color-scheme: dark) {
+			color: colour(cherry, 100);
 		}
 	}
 
